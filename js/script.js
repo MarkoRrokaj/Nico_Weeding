@@ -18,3 +18,23 @@ document.addEventListener('DOMContentLoaded', function() {
     prevButton.addEventListener('click', () => goToSlide(currentIndex - 1));
     nextButton.addEventListener('click', () => goToSlide(currentIndex + 1));
 });
+
+document.querySelectorAll('.faq-question').forEach(item => {
+    item.addEventListener('click', () => {
+        const faqItem = item.parentElement;
+        faqItem.classList.toggle('active');
+        
+        // Close other open items (optional)
+        document.querySelectorAll('.faq-item').forEach(otherItem => {
+            if (otherItem !== faqItem) {
+                otherItem.classList.remove('active');
+            }
+        });
+    });
+});
+
+
+document.querySelector('.back-to-top div').addEventListener('click', function(e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});

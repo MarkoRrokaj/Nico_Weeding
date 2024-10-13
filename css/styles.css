@@ -204,7 +204,7 @@ nav a:hover {
 
 
 
-.wedding-banner {
+/* .wedding-banner {
     background-image: url('path-to-your-image.jpg');
     background-size: cover;
     background-position: center;
@@ -214,9 +214,9 @@ nav a:hover {
     justify-content: flex-start;
     padding-left: 10%;
     position: relative;
-}
+} */
 
-.wedding-banner::before {
+/* .wedding-banner::before {
     content: '';
     position: absolute;
     top: 0;
@@ -224,7 +224,7 @@ nav a:hover {
     right: 0;
     bottom: 0;
     background: linear-gradient(to right, rgba(0,0,0,0.2), rgba(0,0,0,0));
-}
+} */
 
 .banner-content {
     position: relative;
@@ -321,3 +321,294 @@ nav a:hover {
 .carousel-button.next {
     right: 10px;
 }
+
+
+/* __________ THE GIRLS SECTION ________ */
+
+
+
+.wedding-party {
+    background-color: #bcc8bd; /* Sage green background */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif; /* or your preferred cursive font */
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.party-members {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.party-member {
+    flex: 0 1 250px;
+}
+
+.member-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.member-name {
+    font-family: 'Playfair Display', serif; /* or your preferred cursive font */
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.member-role {
+    font-family: 'Roboto', sans-serif; /* or your preferred sans-serif font */
+    font-size: 1rem;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .party-members {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .party-member {
+        margin-bottom: 30px;
+    }
+}
+
+
+
+
+/* __________ THE BOYZ SECTION ________ */
+
+
+/* Common Styles */
+.wedding-party {
+    padding: 20px;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.party-members {
+    display: flex;
+    gap: 20px;
+}
+
+.party-member {
+    text-align: center;
+}
+
+.member-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.member-name {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.member-role {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Styles for the Girls Section */
+.wedding-party.girls {
+    background-color: #f5f5f5; /* Example color for the girls section */
+}
+
+/* Styles for the Guys Section */
+.wedding-party.guys {
+    background-color: #8c9a85;
+}
+
+
+
+
+/* __________ THE TRAVEL INFO SECTION ________ */
+
+
+
+.travel-guide {
+    background: url('path-to-background-image.jpg') no-repeat center center;
+    background-size: cover;
+    text-align: center;
+    padding: 50px;
+    position: relative;
+}
+
+.travel-title {
+    font-size: 48px;
+    font-family: 'Cursive', sans-serif;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.categories {
+    display: flex;
+    justify-content: space-around;
+}
+
+.category {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.category:hover {
+    transform: scale(1.05);
+}
+
+.category-icon {
+    width: 100px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.category-button {
+    background-color: #333;
+    color: white;
+    font-size: 16px;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.category-button:hover {
+    background-color: #555;
+}
+
+
+
+
+/* __________ FAQ SECTION ________ */
+
+
+
+.faq-section {
+    background-color: #4d5048; /* Match the dark background from the image */
+    padding: 50px;
+    font-family: 'Cursive', sans-serif;
+    color: #ffffff;
+    text-align: center;
+}
+
+.faq-title {
+    font-size: 48px;
+    color: #ffffff;
+    margin-bottom: 40px;
+}
+
+.faq {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ffffff;
+}
+
+.faq-question {
+    width: 100%;
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background-color: #4d5048;
+    padding-left: 15px;
+}
+
+.faq-answer p {
+    color: #ffffff;
+    font-size: 16px;
+    margin: 15px 0;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 100px; /* Adjust depending on the content */
+}
+
+.faq-question .arrow {
+    font-size: 20px;
+}
+
+.faq-item.active .faq-question .arrow {
+    transform: rotate(180deg);
+}
+
+
+/* __________ FOOTER SECTION ________ */
+
+
+.footer-section {
+    background-color: #3b3029; /* Dark brown background */
+    padding: 40px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.back-to-top {
+    margin-bottom: 30px;
+}
+
+.back-to-top a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.back-to-top .arrow-up {
+    font-size: 24px;
+    margin-top: 10px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.footer-content h1 {
+    font-size: 48px;
+    font-family: 'Serif', sans-serif;
+    margin-bottom: 10px;
+}
+
+.footer-content p {
+    font-size: 14px;
+    color: #ffffff;
+    margin: 0;
+    font-family: 'Sans-serif';
+}
+
+

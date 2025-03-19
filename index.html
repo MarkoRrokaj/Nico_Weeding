@@ -4,220 +4,456 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nico & Shini</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
+    <header>
+        <nav class="main-nav" id="main-nav">
+            <div class="nav-logo">S&N</div>
+            <div class="nav-container">
+                <div class="nav-toggle" id="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="nav-links">
+                    <a href="#home" class="active">Home</a>
+                    <a href="#story">Our Story</a>
+                    <a href="#details">The Details</a>
+                    <a href="#gallery">Gallery</a>
+                    <a href="#wedding-party">Wedding Party</a>
+                    <a href="#travel">Travel Guide</a>
+                    <a href="#photo-share">Paparazzi</a>
+                    <a href="#faq">FAQs</a>
+                    <!-- <a href="#registry">Registry</a> -->
+                </div>
+            </div>
+        </nav>
+    </header>
 
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#story">Our Story</a>
-        <a href="#details">The Details</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#wedding-party">Wedding Party</a>
-        <a href="#travel">Travel Guide</a>
-        <a href="#faq">FAQs</a>
-        <a href="#registry">Registry</a>
-    </nav>
-
-    <div class="hero">
+    <section id="home" class="hero">
         <div class="overlay"></div>
-        <h1>Nico & Shini</h1>
-        <div class="details-overlay">
-            <h2>We're Getting Married!</h2>
-            <p>Sept 26, 2025, 12:00 AM | Ancona (IT)</p>
-            <button>Details</button>
+        <div class="hero-content">
+            <!-- <h1 class="hero-title">Nico & Shini</h1> -->
+            <div class="details-overlay">
+                <h2>We're Getting Married!</h2>
+                <p>September 26, 2025 | Ancona, Italy</p>
+                <div class="countdown-timer">
+                    <!-- Countdown will be added by JavaScript -->
+                </div>
+                <a href="#details" class="btn btn-primary">View Details</a>
+            </div>
         </div>
-    </div>
+    </section>
 
-
+    <div class="timeline-wrapper">
     <section id="story" class="timeline-section">
+        <div class="section-header">
+            <h2>Our Journey Together</h2>
+            <p>The story of how we found each other</p>
+        </div>
         <div class="timeline-container">
+            <!-- Event 1 -->
             <div class="timeline-item">
-                <p class="timeline-date">10.07.2017</p>
+                <div class="timeline-dot"></div>
+                <p class="timeline-date">October 7, 2017</p>
                 <div class="timeline-content">
-                    <img src="./images/wedd.jpg" alt="We met & fell in love">
-                    <p>We met & fell in love</p>
+                    <h3>We met & fell in love</h3>
+                    <p>The beginning of our beautiful journey together</p>
+                </div>
+                <div class="timeline-img-container">
+                    <img src="./images/mos3.jpeg" alt="We met & fell in love">
                 </div>
             </div>
+            
+            <!-- Event 2 -->
             <div class="timeline-item">
-                <p class="timeline-date">07.07.2018</p>
+                <div class="timeline-dot"></div>
+                <p class="timeline-date">July 7, 2018</p>
+                <div class="timeline-img-container">
+                    <img src="./images/mos3.jpeg" alt="We adventured...with a lot of fishing">
+                </div>
                 <div class="timeline-content">
-                    <img src="./images/wedd.jpg" alt="We adventured...with a lot of fishing">
-                    <p>We adventured...with a lot of fishing</p>
+                    <h3>We adventured</h3>
+                    <p>Exploring the world together, with a lot of fishing</p>
                 </div>
             </div>
+            
+            <!-- Event 3 -->
             <div class="timeline-item">
-                <p class="timeline-date">12.21.2019</p>
+                <div class="timeline-dot"></div>
+                <p class="timeline-date">December 21, 2019</p>
                 <div class="timeline-content">
-                    <img src="./images/wedd.jpg" alt="We proclaimed our love for the Lord together!">
+                    <h3>Our Faith Journey</h3>
                     <p>We proclaimed our love for the Lord together!</p>
-                    <p>Acts 22:16</p>
+                    <p class="timeline-verse">Acts 22:16</p>
+                </div>
+                <div class="timeline-img-container">
+                    <img src="./images/mos3.jpeg" alt="We proclaimed our love for the Lord together!">
                 </div>
             </div>
+            
+            <!-- Event 4 -->
             <div class="timeline-item">
-                <p class="timeline-date">08.24.2020</p>
+                <div class="timeline-dot"></div>
+                <p class="timeline-date">August 24, 2020</p>
+                <div class="timeline-img-container">
+                    <img src="./images/mos3.jpeg" alt="We moved to AZ & adopted our Goosey">
+                </div>
                 <div class="timeline-content">
-                    <img src="./images/wedd.jpg" alt="We moved to AZ & adopted our Goosey">
-                    <p>We moved to AZ & adopted our Goosey</p>
+                    <h3>New Beginnings</h3>
+                    <p>We moved to Arizona & adopted our Goosey</p>
                 </div>
             </div>
+            
+            <!-- Event 5 -->
             <div class="timeline-item">
-                <p class="timeline-date">01.24.2023</p>
+                <div class="timeline-dot"></div>
+                <p class="timeline-date">January 24, 2023</p>
                 <div class="timeline-content">
-                    <img src="./images/wedd.jpg" alt="WE'RE ENGAGED!">
+                    <h3>The Proposal</h3>
                     <p>WE'RE ENGAGED!</p>
                 </div>
+                <div class="timeline-img-container">
+                    <img src="./images/mos3.jpeg" alt="WE'RE ENGAGED!">
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+    <section id="details" class="wedding-details">
+        <div class="section-header light">
+            <h2>Wedding Details</h2>
+            <p>Join us for our special day</p>
+        </div>
+        <div class="details-container">
+            <div class="detail-card">
+                <div class="detail-icon">
+                    <i class="fas fa-church"></i>
+                </div>
+                <h3>Ceremony</h3>
+                <p class="detail-time">12:00</p>
+                <p class="detail-location">Piazza Del Papa</p>
+                <p class="detail-address">Via Posatora 17, Ancona, Italy</p>
+            </div>
+            <div class="detail-card">
+                <div class="detail-icon">
+                    <i class="fas fa-glass-cheers"></i>
+                </div>
+                <h3>Reception</h3>
+                <p class="detail-time">14:00</p>
+                <p class="detail-location">RAVAL</p>
+                <p class="detail-address">Piazza del Papa, Ancona, Italy</p>
+            </div>
+            <div class="detail-card">
+                <div class="detail-icon">
+                    <i class="fas fa-calendar-day"></i>
+                </div>
+                <h3>Date</h3>
+                <p class="detail-date">September 26, 2025</p>
+                <p class="detail-day">Friday</p>
+                <p class="detail-dress">Formal Attire</p>
             </div>
         </div>
     </section>
 
-    <sectionn id="details" class="wedding-banner">
-        <div class="banner-content">
-            <h2 class="banner-title">
-                <span class="banner-title-top">THE</span>
-                <span class="banner-title-bottom">Wedding</span>
-            </h2>
-            <p class="banner-subtitle">No events at the moment</p>
+    <section id="gallery" class="gallery-section">
+        <div class="section-header">
+            <h2>Our Gallery</h2>
+            <p>Cherished moments together</p>
         </div>
-    </section>
-
-    <section id="gallery" class="image-carousel">
-        <div class="carousel-container">
-            <div class="carousel-slide">
-                <img src="./images/wedd.jpg" alt="Couple on beach">
-            </div>
-            <div class="carousel-slide">
-                <img src="./images/wedd.jpg" alt="Couple sitting on sand">
-            </div>
-            <div class="carousel-slide">
-                <img src="./images/wedd.jpg" alt="Couple embracing on beach">
-            </div>
-            <div class="carousel-slide">
-                <img src="./images/wedd.jpg" alt="Couple hugging on beach">
-            </div>
-        </div>
-        <button class="carousel-button prev">&lt;</button>
-        <button class="carousel-button next">&gt;</button>
-    </section>
-
-    <section class="wedding-party girls">
-        <h2 class="section-title">The Girls</h2>
-        <div class="party-members">
-            <div class="party-member">
-                <img src="./images/wedd.jpg" alt="Kaila Johanson" class="member-image">
-                <h3 class="member-name">Kaila Johanson</h3>
-                <p class="member-role">Maid of Honor</p>
-            </div>
-            <div class="party-member">
-                <img src="./images/wedd.jpg" alt="Emily Shryock" class="member-image">
-                <h3 class="member-name">Emily Shryock</h3>
-                <p class="member-role">Bridesmaid</p>
-            </div>
-            <div class="party-member">
-                <img src="./images/wedd.jpg" alt="Kyla Miranda" class="member-image">
-                <h3 class="member-name">Kyla Miranda</h3>
-                <p class="member-role">Bridesmaid</p>
-            </div>
-        </div>
-    </section>
-
-
-    <section class="wedding-party guys">
-        <h2 class="section-title">The Guys</h2>
-        <div class="party-members">
-            <div class="party-member">
-                <img src="./images/wedd.jpg" alt="John Doe" class="member-image">
-                <h3 class="member-name">John Doe</h3>
-                <p class="member-role">Best Man</p>
-            </div>
-            <div class="party-member">
-                <img src="./images/wedd.jpg" alt="Mark Smith" class="member-image">
-                <h3 class="member-name">Mark Smith</h3>
-                <p class="member-role">Groomsman</p>
-            </div>
-            <div class="party-member">
-                <img src="./images/wedd.jpg" alt="James Taylor" class="member-image">
-                <h3 class="member-name">James Taylor</h3>
-                <p class="member-role">Groomsman</p>
-            </div>
-        </div>
-    </section>
-
-
-    <section class="travel-guide">
-        <h1 class="travel-title">Travel Guide</h1>
-        <div class="categories">
-            <div class="category">
-                <img src="./images/bed.svg" alt="Lodging Icon" class="category-icon">
-                <button class="category-button">Lodging</button>
-            </div>
-            <div class="category">
-                <img src="./images/car.svg" alt="Transportation Icon" class="category-icon">
-                <button class="category-button">Transportation</button>
-            </div>
-            <div class="category">
-                <img src="./images/cut.svg" alt="Places to Eat Icon" class="category-icon">
-                <button class="category-button">Places to Eat</button>
-            </div>
-            <div class="category">
-                <img src="./images/ln.svg" alt="Things to Do Icon" class="category-icon">
-                <button class="category-button">Things to Do</button>
-            </div>
+        <div class="gallery-grid">
+            <div class="gallery-item tall"><img src="./images/mos7.jpeg" ></div>
+            <div class="gallery-item wide"><img src="./images/mos2.jpeg"></div>
+            <div class="gallery-item"><img src="./images/mos3.jpeg"></div>
+            <div class="gallery-item tall"><img src="./images/mos4.jpeg"></div>
+            <div class="gallery-item"><img src="./images/mos5.jpeg" ></div>
+            <div class="gallery-item"><img src="./images/mos5.jpeg" ></div>
+            <div class="gallery-item tall"><img src="./images/mos3.jpeg"></div>
+            <div class="gallery-item"><img src="./images/mos5.jpeg" ></div>
+            <div class="gallery-item wide"><img src="./images/mos5.jpeg" ></div>
+            <div class="gallery-item tall"><img src="./images/mos5.jpeg" ></div>
+            <div class="gallery-item wide"><img src="./images/mos6.jpeg"></div>
         </div>
     </section>
     
 
-    <section class="faq-section">
-        <h2 class="faq-title">Frequently Asked Questions</h2>
-        <div class="faq">
+    <section id="wedding-party" class="wedding-party-section">
+        <div class="section-header">
+            <h2>Wedding Party</h2>
+            <p>Our closest friends and family</p>
+        </div>
+        
+        <div class="wedding-party girls">
+            <h3 class="party-subtitle">The Girls</h3>
+            <div class="party-members">
+                <div class="party-member">
+                    <div class="member-img-container">
+                        <img src="./images/ellen.jpeg" alt="Ellen" class="member-image">
+                    </div>
+                    <h4 class="member-name">Ellen</h4>
+                    <p class="member-role">Bridesmaid</p>
+                </div>
+                <div class="party-member">
+                    <div class="member-img-container">
+                        <img src="./images/diya.jpeg" alt="Diya" class="member-image">
+                    </div>
+                    <h4 class="member-name">Diya</h4>
+                    <p class="member-role">Bridesmaid</p>
+                </div>
+                <div class="party-member">
+                    <div class="member-img-container">
+                        <img src="./images/stefania.jpeg" alt="Stefania" class="member-image">
+                    </div>
+                    <h4 class="member-name">Stefania</h4>
+                    <p class="member-role">Bridesmaid</p>
+                </div>
+                <div class="party-member">
+                    <div class="member-img-container">
+                        <img src="./images/lauren.jpeg" alt="Lauren" class="member-image">
+                    </div>
+                    <h4 class="member-name">Lauren</h4>
+                    <p class="member-role">Bridesmaid</p>
+                </div>
+                <div class="party-member">
+                    <div class="member-img-container">
+                        <img src="./images/vale.jpeg" alt="Valentina" class="member-image">
+                    </div>
+                    <h4 class="member-name">Valentina</h4>
+                    <p class="member-role">Bridesmaid</p>
+                </div>
+                <div class="party-member">
+                    <div class="member-img-container">
+                        <img src="./images/nanthana.jpeg" alt="Nanthana" class="member-image">
+                    </div>
+                    <h4 class="member-name">Nanthana</h4>
+                    <p class="member-role">Bridesmaid</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="wedding-party guys">
+            <h3 class="party-subtitle">The Guys</h3>
+            <div class="party-members">
+                <div class="party-member">
+                    <div class="member-img-container">
+                        <img src="./images/wedd.jpeg" alt="John Doe" class="member-image">
+                    </div>
+                    <h4 class="member-name">Francesco</h4>
+                    <p class="member-role">Groomsman</p>
+                </div>
+                <div class="party-member">
+                    <div class="member-img-container">
+                        <img src="./images/wedd.jpeg" alt="Mark Smith" class="member-image">
+                    </div>
+                    <h4 class="member-name">Giole</h4>
+                    <p class="member-role">Groomsman</p>
+                </div>
+                <div class="party-member">
+                    <div class="member-img-container">
+                        <img src="./images/wedd.jpeg" alt="James Taylor" class="member-image">
+                    </div>
+                    <h4 class="member-name">Mathias</h4>
+                    <p class="member-role">Groomsman</p>
+                </div>
+                <div class="party-member">
+                    <div class="member-img-container">
+                        <img src="./images/wedd.jpeg" alt="James Taylor" class="member-image">
+                    </div>
+                    <h4 class="member-name">Medji</h4>
+                    <p class="member-role">Groomsman</p>
+                </div>
+                <div class="party-member">
+                    <div class="member-img-container">
+                        <img src="./images/wedd.jpeg" alt="James Taylor" class="member-image">
+                    </div>
+                    <h4 class="member-name">Jake</h4>
+                    <p class="member-role">Groomsman</p>
+                </div>
+                <div class="party-member">
+                    <div class="member-img-container">
+                        <img src="./images/wedd.jpeg" alt="James Taylor" class="member-image">
+                    </div>
+                    <h4 class="member-name">Tibor</h4>
+                    <p class="member-role">Groomsman</p>
+                </div>
+                <div class="party-member">
+                    <div class="member-img-container">
+                        <img src="./images/wedd.jpeg" alt="James Taylor" class="member-image">
+                    </div>
+                    <h4 class="member-name">Roland</h4>
+                    <p class="member-role">Groomsman</p>
+                </div>
+                <div class="party-member">
+                    <div class="member-img-container">
+                        <img src="./images/wedd.jpeg" alt="James Taylor" class="member-image">
+                    </div>
+                    <h4 class="member-name">Marko</h4>
+                    <p class="member-role">Groomsman</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="travel" class="travel-section">
+        <div class="section-header">
+            <h2>Travel Guide</h2>
+            <p>Plan your visit to Ancona, Italy</p>
+        </div>
+        <div class="travel-container">
+            <div class="category">
+                <div class="category-icon">
+                    <i class="fas fa-bed"></i>
+                </div>
+                <h3>Lodging</h3>
+                <p>Find the perfect place to stay during your visit</p>
+                <button class="btn travel-btn">View Options</button>
+            </div>
+            <div class="category">
+                <div class="category-icon">
+                    <i class="fas fa-car"></i>
+                </div>
+                <h3>Transportation</h3>
+                <p>Getting to and around Ancona</p>
+                <button class="btn travel-btn">View Options</button>
+            </div>
+            <div class="category">
+                <div class="category-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <h3>Places to Eat</h3>
+                <p>Restaurants and dining options</p>
+                <button class="btn travel-btn">View Options</button>
+            </div>
+            <div class="category">
+                <div class="category-icon">
+                    <i class="fas fa-map-marked-alt"></i>
+                </div>
+                <h3>Things to Do</h3>
+                <p>Attractions and activities in the area</p>
+                <button class="btn travel-btn">View Options</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="photo-share" class="photo-share-section">
+        <div class="section-header">
+            <h2>📸 Share Your Moments</h2>
+            <p>We love capturing memories with all of you, but let’s be honest—some of you are way better photographers than we are! 
+                So, if you snap some amazing shots (or even some hilariously bad ones), we’d love for you to share them with us. 
+                We’ve set up a <strong>Google Drive</strong> where you can drop all your best (and worst) moments. 
+                Think of it as our own little wedding paparazzi gallery. 📷✨</p>
+            <a href="YOUR_GOOGLE_DRIVE_LINK" target="_blank" class="btn share-btn">Upload Your Pics</a>
+        </div>
+    </section>
+
+    <section id="faq" class="faq-section">
+        <div class="section-header">
+            <h2>Frequently Asked Questions</h2>
+            <p>Everything you need to know</p>
+        </div>
+        <div class="faq-container">
             <div class="faq-item">
-                <button class="faq-question">Where will the ceremony and reception be held? <span class="arrow">&#x25BC;</span></button>
+                <button class="faq-question">
+                    Where will the ceremony and reception be held? 
+                    <span class="arrow"><i class="fas fa-chevron-down"></i></span>
+                </button>
                 <div class="faq-answer">
-                    <p>The ceremony and reception will be held at [Location].</p>
+                    <p>The ceremony will be held at RAVAL, Piazza del Papa, and the reception will follow at Posatora. Both locations are in Ancona, Italy.</p>
                 </div>
             </div>
             <div class="faq-item">
-                <button class="faq-question">Where should I stay? <span class="arrow">&#x25BC;</span></button>
+                <button class="faq-question">
+                    Where should I stay? 
+                    <span class="arrow"><i class="fas fa-chevron-down"></i></span>
+                </button>
                 <div class="faq-answer">
-                    <p>Here are some recommended hotels near the venue: [Hotel List].</p>
+                    <p>We recommend the Grand Hotel Ancona or Villa Serena for accommodation. Both are located within 15 minutes of our venue and offer special rates for our wedding guests.</p>
                 </div>
             </div>
             <div class="faq-item">
-                <button class="faq-question">How do I get there? Will there be parking? <span class="arrow">&#x25BC;</span></button>
+                <button class="faq-question">
+                    How do I get there? Will there be parking? 
+                    <span class="arrow"><i class="fas fa-chevron-down"></i></span>
+                </button>
                 <div class="faq-answer">
-                    <p>You can reach the venue by [Transportation Details]. Parking is available onsite.</p>
+                    <p>The closest airport is Ancona Falconara Airport (AOI). From there, you can rent a car or take a taxi to the venue. Complimentary parking will be available at both the ceremony and reception venues.</p>
                 </div>
             </div>
             <div class="faq-item">
-                <button class="faq-question">What time should I arrive? <span class="arrow">&#x25BC;</span></button>
+                <button class="faq-question">
+                    What time should I arrive? 
+                    <span class="arrow"><i class="fas fa-chevron-down"></i></span>
+                </button>
                 <div class="faq-answer">
-                    <p>We recommend arriving at least 30 minutes before the ceremony starts.</p>
+                    <p>The ceremony starts at 4:00 PM. We recommend arriving at least 30 minutes early to find seating and get settled.</p>
                 </div>
             </div>
             <div class="faq-item">
-                <button class="faq-question">What should I wear? <span class="arrow">&#x25BC;</span></button>
+                <button class="faq-question">
+                    What should I wear? 
+                    <span class="arrow"><i class="fas fa-chevron-down"></i></span>
+                </button>
                 <div class="faq-answer">
-                    <p>Please wear formal attire. [Additional Dress Code Information].</p>
+                    <p>Our wedding is formal attire. Suits and ties for men, cocktail or formal dresses for women. The ceremony will be held outdoors, so please consider comfortable shoes for garden terrain.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    
+    <!-- <section id="registry" class="registry-section">
+        <div class="section-header light">
+            <h2>Registry</h2>
+            <p>Your presence is our present, but if you wish to give a
+                <p>Your presence is our present, but if you wish to give a gift</p>
+        </div>
+        <div class="registry-container">
+            <div class="registry-card">
+                <div class="registry-logo">
+                    <i class="fas fa-gift"></i>
+                </div>
+                <h3>Amazon Registry</h3>
+                <p>Explore our wishlist</p>
+                <a href="#" class="btn btn-secondary">View Registry</a>
+            </div>
+            <div class="registry-card">
+                <div class="registry-logo">
+                    <i class="fas fa-home"></i>
+                </div>
+                <h3>Crate & Barrel</h3>
+                <p>Help us build our home</p>
+                <a href="#" class="btn btn-secondary">View Registry</a>
+            </div>
+            <div class="registry-card">
+                <div class="registry-logo">
+                    <i class="fas fa-plane"></i>
+                </div>
+                <h3>Honeymoon Fund</h3>
+                <p>Contribute to our adventure</p>
+                <a href="#" class="btn btn-secondary">Contribute</a>
+            </div>
+        </div>
+    </section> -->
+
     <footer class="footer-section">
-        <div class="back-to-top">
-            <a>Back to Top</a>
-            <div href="#top" class="arrow-up">&#x25B2;</div>
-        </div>
         <div class="footer-content">
-            <h1>N & S</h1>
-            <p>&copy; 2024 by Marko Rrokaj</p>
+            <div class="footer-logo">S & N</div>
+            <p class="wedding-date">September 26, 2025</p>
+            <div class="social-links">
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+            </div>
+            <div class="back-to-top">
+                <a href="#home">Back to Top <i class="fas fa-chevron-up"></i></a>
+            </div>
+            <p class="copyright">&copy; 2025 by Shini & Nico | Created by Marko Rrokaj</p>
         </div>
     </footer>
     
-    
-
 
     <script src="js/script.js"></script>
 </body>

@@ -1,208 +1,109 @@
 body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
 }
 
 nav {
-    display: flex;
-    justify-content: center;
-    background-color: #f8f8f8;
-    padding: 15px 0;
-    border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: center;
+  background-color: #f8f8f8;
+  padding: 15px 0;
+  border-bottom: 1px solid #ddd;
 }
 
 nav a {
-    text-decoration: none;
-    color: #333;
-    margin: 0 20px;
-    font-size: 18px;
-    font-weight: 500;
+  text-decoration: none;
+  color: #333;
+  margin: 0 20px;
+  font-size: 18px;
+  font-weight: 500;
 }
 
 nav a:hover {
-    color: #000;
-    font-weight: 700;
+  color: #000;
+  font-weight: 700;
 }
 
 .hero {
-    background-image: url('../images/wedd.jpg'); /* Replace with your image URL */
-    background-size: cover;
-    background-position: center;
-    height: 90vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+  background-image: url("../images/wedd.jpeg"); /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 .hero img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.2); /* Light overlay for better text visibility */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(
+    255,
+    255,
+    255,
+    0.2
+  ); /* Light overlay for better text visibility */
 }
 
 .hero h1 {
-    font-family: 'Playfair Display', serif;
-    color: #fff;
-    font-size: 50px;
-    z-index: 1;
-    text-align: center;
-    position: absolute;
-    top: 25px;
+  font-family: "Playfair Display", serif;
+  color: #fff;
+  font-size: 50px;
+  z-index: 1;
+  text-align: center;
+  position: absolute;
+  top: 25px;
 }
 
 .details-overlay {
-    color: #fff;
-    z-index: 1;
-    text-align: center;
-    padding: 20px;
-    border-radius: 10px;
-    position: relative;
-    top: 0; /* Adjust this value to position the section */
-    max-width: 500px;
+  color: #fff;
+  z-index: 1;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  top: 0; /* Adjust this value to position the section */
+  max-width: 500px;
 }
 
 .details-overlay h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 32px;
-    margin-bottom: 10px;
+  font-family: "Playfair Display", serif;
+  font-size: 32px;
+  margin-bottom: 10px;
 }
 
 .details-overlay p {
-    font-family: 'Roboto', sans-serif;
-    font-size: 18px;
-    margin-bottom: 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  margin-bottom: 20px;
 }
 
 .details-overlay button {
-    padding: 10px 20px;
-    background-color: #000;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
 }
 
 .details-overlay button:hover {
-    background-color: #333;
+  background-color: #333;
 }
-
-
-/* __________ TIMELINE SECTION ________ */
-
-
-.timeline-section {
-    background-color: #3c4142;
-    padding: 50px 20px;
-    color: #e0d9c9;
-    overflow-x: auto;
-}
-
-.timeline-container {
-    display: flex;
-    position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-bottom: 20px;
-}
-
-.timeline-container::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background-color: #e0d9c9;
-    bottom: 0;
-    left: 0;
-}
-
-.timeline-item {
-    flex: 1;
-    padding: 0 20px;
-    position: relative;
-    min-width: 200px;
-}
-
-.timeline-item::after {
-    content: '';
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    background-color: #e0d9c9;
-    border: 3px solid #3c4142;
-    bottom: -29px;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 50%;
-    z-index: 1;
-}
-
-.timeline-date {
-    font-family: 'Playfair Display', serif;
-    font-size: 18px;
-    color: #e0d9c9;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.timeline-content {
-    text-align: center;
-}
-
-.timeline-content img {
-    width: 100%;
-    height: auto;
-    max-width: 200px;
-    border-radius: 6px;
-    margin-bottom: 10px;
-}
-
-.timeline-content p {
-    margin: 0;
-    font-size: 14px;
-    line-height: 1.4;
-}
-
-@media screen and (max-width: 768px) {
-    .timeline-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .timeline-item {
-        width: 100%;
-        margin-bottom: 30px;
-    }
-
-    .timeline-item::after {
-        bottom: -35px;
-    }
-
-    .timeline-container::after {
-        height: 100%;
-        width: 2px;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-}
-
-
 
 /* __________ WEDDING BANNER SECTION ________ */
-
-
 
 /* .wedding-banner {
     background-image: url('path-to-your-image.jpg');
@@ -227,388 +128,1670 @@ nav a:hover {
 } */
 
 .banner-content {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 }
 
 .banner-title {
-    font-family: 'Playfair Display', serif;
-    color: #333;
-    line-height: 1;
-    margin-bottom: 20px;
+  font-family: "Playfair Display", serif;
+  color: #333;
+  line-height: 1;
+  margin-bottom: 20px;
 }
 
 .banner-title-top {
-    display: block;
-    font-size: 3rem;
-    font-weight: 400;
+  display: block;
+  font-size: 3rem;
+  font-weight: 400;
 }
 
 .banner-title-bottom {
-    display: block;
-    font-size: 6rem;
-    font-weight: 700;
+  display: block;
+  font-size: 6rem;
+  font-weight: 700;
 }
 
 .banner-subtitle {
-    font-family: 'Roboto', sans-serif;
-    color: #333;
-    font-size: 1.5rem;
-    font-weight: 300;
+  font-family: "Roboto", sans-serif;
+  color: #333;
+  font-size: 1.5rem;
+  font-weight: 300;
 }
 
 @media (max-width: 768px) {
-    .wedding-banner {
-        padding-left: 5%;
-        height: 60vh;
-    }
+  .wedding-banner {
+    padding-left: 5%;
+    height: 60vh;
+  }
 
-    .banner-title-top {
-        font-size: 2rem;
-    }
+  .banner-title-top {
+    font-size: 2rem;
+  }
 
-    .banner-title-bottom {
-        font-size: 4rem;
-    }
+  .banner-title-bottom {
+    font-size: 4rem;
+  }
 
-    .banner-subtitle {
-        font-size: 1.2rem;
-    }
+  .banner-subtitle {
+    font-size: 1.2rem;
+  }
 }
-
 
 /* __________ IMAGE CAROUSEL SECTION ________ */
 
-
 .image-carousel {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
 }
 
 .carousel-container {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
+  display: flex;
+  transition: transform 0.5s ease-in-out;
 }
 
 .carousel-slide {
-    min-width: 100%;
-    box-sizing: border-box;
+  min-width: 100%;
+  box-sizing: border-box;
 }
 
 .carousel-slide img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .carousel-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    font-size: 18px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 18px;
 }
 
 .carousel-button.prev {
-    left: 10px;
+  left: 10px;
 }
 
 .carousel-button.next {
-    right: 10px;
+  right: 10px;
 }
-
 
 /* __________ THE GIRLS SECTION ________ */
 
-
-
 .wedding-party {
-    background-color: #bcc8bd; /* Sage green background */
-    padding: 60px 20px;
-    text-align: center;
+  background-color: #bcc8bd; /* Sage green background */
+  padding: 60px 20px;
+  text-align: center;
 }
 
 .section-title {
-    font-family: 'Playfair Display', serif; /* or your preferred cursive font */
-    font-size: 3rem;
-    color: #333;
-    margin-bottom: 40px;
+  font-family: "Playfair Display", serif; /* or your preferred cursive font */
+  font-size: 3rem;
+  color: #333;
+  margin-bottom: 40px;
 }
 
 .party-members {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
 }
 
 .party-member {
-    flex: 0 1 250px;
+  flex: 0 1 250px;
+  margin: 0 auto;
 }
 
 .member-image {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 20px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
 }
 
 .member-name {
-    font-family: 'Playfair Display', serif; /* or your preferred cursive font */
-    font-size: 1.5rem;
-    color: #333;
-    margin-bottom: 5px;
+  font-family: "Playfair Display", serif; /* or your preferred cursive font */
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 5px;
 }
 
 .member-role {
-    font-family: 'Roboto', sans-serif; /* or your preferred sans-serif font */
-    font-size: 1rem;
-    color: #555;
+  font-family: "Roboto", sans-serif; /* or your preferred sans-serif font */
+  font-size: 1rem;
+  color: #555;
 }
 
 @media (max-width: 768px) {
-    .party-members {
-        flex-direction: column;
-        align-items: center;
-    }
+  .party-members {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .party-member {
-        margin-bottom: 30px;
-    }
+  .party-member {
+    margin-bottom: 30px;
+  }
 }
-
-
-
 
 /* __________ THE BOYZ SECTION ________ */
 
-
 /* Common Styles */
 .wedding-party {
-    padding: 20px;
+  padding: 20px;
 }
 
 .section-title {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
 }
 
 .party-members {
-    display: flex;
-    gap: 20px;
+  display: flex;
+  gap: 20px;
 }
 
 .party-member {
-    text-align: center;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .member-image {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .member-name {
-    font-size: 18px;
-    margin-top: 10px;
+  font-size: 18px;
+  margin-top: 10px;
 }
 
 .member-role {
-    font-size: 16px;
-    color: #555;
+  font-size: 16px;
+  color: #555;
 }
 
 /* Styles for the Girls Section */
 .wedding-party.girls {
-    background-color: #f5f5f5; /* Example color for the girls section */
+  background-color: #f5f5f5; /* Example color for the girls section */
 }
 
 /* Styles for the Guys Section */
 .wedding-party.guys {
-    background-color: #8c9a85;
+  background-color: #0d0d0d;
 }
-
-
-
 
 /* __________ THE TRAVEL INFO SECTION ________ */
 
-
-
 .travel-guide {
-    background: url('path-to-background-image.jpg') no-repeat center center;
-    background-size: cover;
-    text-align: center;
-    padding: 50px;
-    position: relative;
+  background: url("path-to-background-image.jpg") no-repeat center center;
+  background-size: cover;
+  text-align: center;
+  padding: 50px;
+  position: relative;
 }
 
 .travel-title {
-    font-size: 48px;
-    font-family: 'Cursive', sans-serif;
-    color: #333;
-    margin-bottom: 40px;
+  font-size: 48px;
+  font-family: "Cursive", sans-serif;
+  color: #333;
+  margin-bottom: 40px;
 }
 
 .categories {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 
 .category {
-    position: relative;
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 20px;
-    border-radius: 10px;
-    transition: transform 0.3s ease-in-out;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
 }
 
 .category:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .category-icon {
-    width: 100px;
-    height: auto;
-    margin-bottom: 15px;
+  width: 100px;
+  height: auto;
+  margin-bottom: 15px;
 }
 
 .category-button {
-    background-color: #333;
-    color: white;
-    font-size: 16px;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    text-transform: uppercase;
-    transition: background-color 0.3s ease-in-out;
+  background-color: #333;
+  color: white;
+  font-size: 16px;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .category-button:hover {
-    background-color: #555;
+  background-color: #555;
 }
-
-
-
 
 /* __________ FAQ SECTION ________ */
 
-
-
 .faq-section {
-    background-color: #4d5048; /* Match the dark background from the image */
-    padding: 50px;
-    font-family: 'Cursive', sans-serif;
-    color: #ffffff;
-    text-align: center;
+  background-color: #bfbfbf; /* Match the dark background from the image */
+  padding: 50px;
+  font-family: "Cursive", sans-serif;
+  color: #ffffff;
+  text-align: center;
 }
 
 .faq-title {
-    font-size: 48px;
-    color: #ffffff;
-    margin-bottom: 40px;
+  font-size: 48px;
+  color: #ffffff;
+  margin-bottom: 40px;
 }
 
 .faq {
-    max-width: 800px;
-    margin: 0 auto;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .faq-item {
-    margin-bottom: 10px;
-    border-bottom: 1px solid #ffffff;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ffffff;
 }
 
 .faq-question {
-    width: 100%;
-    background-color: transparent;
-    color: #ffffff;
-    font-size: 18px;
-    font-weight: bold;
-    text-align: left;
-    border: none;
-    padding: 15px;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  width: 100%;
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: left;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .faq-answer {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-    background-color: #4d5048;
-    padding-left: 15px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  /* background-color: #4d5048; */
+  padding-left: 15px;
 }
 
 .faq-answer p {
-    color: #ffffff;
-    font-size: 16px;
-    margin: 15px 0;
+  color: #ffffff;
+  font-size: 16px;
+  margin: 15px 0;
 }
 
 .faq-item.active .faq-answer {
-    max-height: 100px; /* Adjust depending on the content */
+  max-height: 100px; /* Adjust depending on the content */
 }
 
 .faq-question .arrow {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 .faq-item.active .faq-question .arrow {
-    transform: rotate(180deg);
+  transform: rotate(180deg);
 }
-
 
 /* __________ FOOTER SECTION ________ */
 
-
 .footer-section {
-    background-color: #3b3029; /* Dark brown background */
-    padding: 40px;
-    text-align: center;
-    color: #ffffff;
+  background-color: #3b3029; /* Dark brown background */
+  padding: 40px;
+  text-align: center;
+  color: #ffffff;
 }
 
 .back-to-top {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .back-to-top a {
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 14px;
-    font-weight: 500;
-    text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
 }
 
 .back-to-top .arrow-up {
-    font-size: 24px;
-    margin-top: 10px;
-    color: #ffffff;
-    cursor: pointer;
+  font-size: 24px;
+  margin-top: 10px;
+  color: #ffffff;
+  cursor: pointer;
 }
 
 .footer-content h1 {
-    font-size: 48px;
-    font-family: 'Serif', sans-serif;
-    margin-bottom: 10px;
+  font-size: 48px;
+  font-family: "Serif", sans-serif;
+  margin-bottom: 10px;
 }
 
 .footer-content p {
-    font-size: 14px;
-    color: #ffffff;
-    margin: 0;
-    font-family: 'Sans-serif';
+  font-size: 14px;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Sans-serif";
 }
 
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
 
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #f8f8f8;
+  padding: 15px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  margin: 0 20px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #000;
+  font-weight: 700;
+}
+
+.hero {
+  background-image: url("../images/wedd.jpeg"); /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(
+    255,
+    255,
+    255,
+    0.2
+  ); /* Light overlay for better text visibility */
+}
+
+.hero h1 {
+  font-family: "Playfair Display", serif;
+  color: #fff;
+  font-size: 50px;
+  z-index: 1;
+  text-align: center;
+  position: absolute;
+  top: 25px;
+}
+
+.details-overlay {
+  color: #fff;
+  z-index: 1;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  top: 0; /* Adjust this value to position the section */
+  max-width: 500px;
+}
+
+.details-overlay h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.details-overlay p {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.details-overlay button {
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.details-overlay button:hover {
+  background-color: #333;
+}
+
+/* __________ WEDDING BANNER SECTION ________ */
+
+/* .wedding-banner {
+      background-image: url('path-to-your-image.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding-left: 10%;
+      position: relative;
+  } */
+
+/* .wedding-banner::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to right, rgba(0,0,0,0.2), rgba(0,0,0,0));
+  } */
+
+.banner-content {
+  position: relative;
+  z-index: 1;
+}
+
+.banner-title {
+  font-family: "Playfair Display", serif;
+  color: #333;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.banner-title-top {
+  display: block;
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.banner-title-bottom {
+  display: block;
+  font-size: 6rem;
+  font-weight: 700;
+}
+
+.banner-subtitle {
+  font-family: "Roboto", sans-serif;
+  color: #333;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+@media (max-width: 768px) {
+  .wedding-banner {
+    padding-left: 5%;
+    height: 60vh;
+  }
+
+  .banner-title-top {
+    font-size: 2rem;
+  }
+
+  .banner-title-bottom {
+    font-size: 4rem;
+  }
+
+  .banner-subtitle {
+    font-size: 1.2rem;
+  }
+}
+
+/* __________ IMAGE CAROUSEL SECTION ________ */
+
+.image-carousel {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.carousel-button.prev {
+  left: 10px;
+}
+
+.carousel-button.next {
+  right: 10px;
+}
+
+/* __________ THE GIRLS SECTION ________ */
+
+.wedding-party {
+  background-color: #bcc8bd; /* Sage green background */
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-family: "Playfair Display", serif; /* or your preferred cursive font */
+  font-size: 3rem;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.party-members {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.party-member {
+  flex: 0 1 250px;
+}
+
+.member-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.member-name {
+  font-family: "Playfair Display", serif; /* or your preferred cursive font */
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.member-role {
+  font-family: "Roboto", sans-serif; /* or your preferred sans-serif font */
+  font-size: 1rem;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .party-members {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .party-member {
+    margin-bottom: 30px;
+  }
+}
+
+/* __________ THE BOYZ SECTION ________ */
+
+/* Common Styles */
+.wedding-party {
+  padding: 20px;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.party-members {
+  display: flex;
+  gap: 20px;
+}
+
+.party-member {
+  text-align: center;
+}
+
+.member-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.member-name {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.member-role {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Styles for the Girls Section */
+.wedding-party.girls {
+  background-color: #f5f5f5; /* Example color for the girls section */
+}
+
+/* Styles for the Guys Section */
+.wedding-party.guys {
+  background-color: #8c9a85;
+}
+
+/* __________ THE TRAVEL INFO SECTION ________ */
+
+.travel-guide {
+  background: url("path-to-background-image.jpg") no-repeat center center;
+  background-size: cover;
+  text-align: center;
+  padding: 50px;
+  position: relative;
+}
+
+.travel-title {
+  font-size: 48px;
+  font-family: "Cursive", sans-serif;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.categories {
+  display: flex;
+  justify-content: space-around;
+}
+
+.category {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.category:hover {
+  transform: scale(1.05);
+}
+
+.category-icon {
+  width: 100px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.category-button {
+  background-color: #333;
+  color: white;
+  font-size: 16px;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.category-button:hover {
+  background-color: #555;
+}
+
+/* __________ FAQ SECTION ________ */
+
+.faq-section {
+  background-color: #bfbfbf; /* Match the dark background from the image */
+  padding: 50px;
+  font-family: "Cursive", sans-serif;
+  color: #ffffff;
+  text-align: center;
+}
+
+.faq-title {
+  font-size: 48px;
+  color: #ffffff;
+  margin-bottom: 40px;
+}
+
+.faq {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ffffff;
+}
+
+.faq-question {
+  width: 100%;
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: left;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  /* background-color: #4d5048; */
+  padding-left: 15px;
+}
+
+.faq-answer p {
+  color: #ffffff;
+  font-size: 16px;
+  margin: 15px 0;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 100px; /* Adjust depending on the content */
+}
+
+.faq-question .arrow {
+  font-size: 20px;
+}
+
+.faq-item.active .faq-question .arrow {
+  transform: rotate(180deg);
+}
+
+/* ===== FOOTER STYLES ===== */
+
+.footer-section {
+  background: #4c5958;
+  padding: 50px 20px;
+  text-align: center;
+  color: #f1e7db; /* Soft off-white for better readability */
+}
+
+.footer-logo {
+  font-size: 2.5rem;
+  font-family: "Playfair Display", serif;
+  font-weight: bold;
+  color: #f8f4f0;
+  margin-bottom: 10px;
+}
+
+.wedding-date {
+  font-size: 1.1rem;
+  font-family: "Roboto", sans-serif;
+  color: #d9cbb7; /* Elegant muted gold */
+  margin-bottom: 20px;
+}
+
+/* Social Links */
+.social-links {
+  margin-bottom: 20px;
+}
+
+.social-links a {
+  padding: 0 10px;
+  color: #f8f4f0;
+  font-size: 1.5rem;
+  transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.social-links a:hover {
+  color: #d9cbb7; /* Muted gold hover effect */
+  transform: translateY(-3px);
+}
+
+/* Back to Top */
+.back-to-top {
+  margin-bottom: 20px;
+}
+
+.back-to-top a {
+  text-decoration: none;
+  color: #f8f4f0;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.3s ease-in-out;
+}
+
+.back-to-top a:hover {
+  color: #d9cbb7;
+}
+
+/* Copyright */
+.copyright {
+  font-size: 0.9rem;
+  font-family: "Roboto", sans-serif;
+  color: #c4b8a5; /* Softer muted gold */
+  margin-top: 15px;
+}
+
+/* ------------------------
+  ---------------------------
+  ------------------------ */
+
+/* Global Styles */
+:root {
+  --primary-color: #8c9a85;
+  --secondary-color: #e0d9c9;
+  --dark-color: #3c4142;
+  --light-color: #f9f9f9;
+  --accent-color: #b8860b;
+  --font-primary: "Cormorant Garamond", serif;
+  --font-secondary: "Montserrat", sans-serif;
+  --transition: all 0.3s ease;
+  --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --border-radius: 5px;
+}
+
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  font-family: var(--font-secondary);
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--dark-color);
+  background-color: var(--light-color);
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-primary);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--dark-color);
+  transition: var(--transition);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+} */
+/* 
+section {
+  padding: 100px 0;
+} */
+
+/* .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px;
+}
+
+.section-header h2 {
+  font-size: 3rem;
+  font-weight: 500;
+  color: var(--dark-color);
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.section-header p {
+  font-size: 1.1rem;
+  color: #666;
+  font-style: italic;
+}
+
+.section-header.light h2,
+.section-header.light p {
+  color: var(--light-color);
+} */
+
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: var(--border-radius);
+  font-family: var(--font-secondary);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
+  border: none;
+  font-size: 0.9rem;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #7b8873;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--dark-color);
+  border: 1px solid var(--dark-color);
+}
+
+.btn-secondary:hover {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+/* Animation Classes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+/* Navigation */
+.main-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+  padding: 15px 0;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.nav-logo {
+  font-family: var(--font-primary);
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--dark-color);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
+  margin: 0 15px;
+  font-family: var(--font-secondary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: var(--primary-color);
+  transition: var(--transition);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: var(--dark-color);
+  margin: 3px 0;
+  transition: var(--transition);
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background-image: url("../images/wedd.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 30px;
+}
+
+.hero-title {
+  font-family: var(--font-primary);
+  font-size: 5rem;
+  font-weight: 300;
+  margin-bottom: 30px;
+  letter-spacing: 3px;
+}
+
+.details-overlay {
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+  padding: 40px;
+  border-radius: var(--border-radius);
+}
+
+.details-overlay h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.details-overlay p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+/* Countdown Timer */
+.countdown-timer {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.countdown-item {
+  margin: 0 15px;
+  text-align: center;
+}
+
+.countdown-value {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+
+.countdown-label {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Wedding Details */
+.wedding-details {
+  background-color: #3b3029;
+  color: white;
+  padding: 100px 0;
+}
+
+.details-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.detail-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 40px 30px;
+  border-radius: var(--border-radius);
+  width: 300px;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.detail-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.detail-icon {
+  font-size: 2.5rem;
+  color: var(--accent-color);
+  margin-bottom: 20px;
+}
+
+.detail-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.detail-time,
+.detail-date {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--accent-color);
+  margin-bottom: 5px;
+}
+
+.detail-location,
+.detail-day {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.detail-address,
+.detail-dress {
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Gallery Section */
+.gallery-section {
+  background-color: var(--light-color);
+  padding: 100px 0;
+}
+
+.image-carousel {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* __________ WEDDING PARTY SECTION ________ */
+
+.wedding-party {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.party-members {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.party-member {
+  flex: 1 1 250px;
+  max-width: 250px;
+  text-align: center;
+}
+
+.member-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.member-name {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.member-role {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* __________ GIRLS & GUYS SECTION ________ */
+.wedding-party.girls {
+  background-color: #bfbfbf;
+  padding: 60px 20px;
+}
+
+.wedding-party.guys {
+  background-color: #8c9a85;
+  padding: 60px 20px;
+}
+
+/* ===== TRAVEL GUIDE STYLES ===== */
+
+.travel-section {
+  background-color: #f8f9fa;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.section-header {
+  margin-bottom: 50px;
+}
+
+/* .section-header h2 {
+  font-size: 2.8rem;
+  font-family: "Playfair Display", serif;
+  color: #333;
+} */
+
+.section-header p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* Travel Cards */
+.travel-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.category {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Icons */
+.category-icon {
+  font-size: 2.5rem;
+  color: #5a7d7c;
+  margin-bottom: 15px;
+}
+
+/* Typography */
+.category h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.category p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+.btn {
+  background-color: #5a7d7c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: #486866;
+}
+
+/* ===== SHARING PICTURES SECTION ===== */
+
+.photo-share-section {
+  /* background-color: ; */
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* .section-header h2 {
+  font-size: 2.5rem;
+  font-family: "Playfair Display", serif;
+  color: #333;
+  margin-bottom: 20px;
+} */
+
+.section-header p {
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto 30px;
+  line-height: 1.6;
+}
+
+/* Share Button */
+.share-btn {
+  background-color: #5a7d7c;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.share-btn:hover {
+  background-color: #486866;
+}
+
+.gallery-section {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #f8f5f2; /* Soft warm background */
+}
+
+/* .section-header h2 {
+  font-size: 2.5rem;
+  font-family: "Playfair Display", serif;
+  color: #3b3029;
+} */
+
+.section-header p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-rows: 200px;
+  gap: 15px;
+  padding: 0 20px;
+  grid-auto-flow: dense; /* Helps avoid empty spaces */
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Assign specific images custom sizes */
+.gallery-item.tall {
+  grid-row: span 2;
+}
+.gallery-item.wide {
+  grid-column: span 2;
+}
+
+.nav-logo {
+  margin: 0 20px;
+}
+
+/* ----------- TIMELINE  ----------------- */
+
+.timeline-wrapper {
+  background-color: #5a7d7c;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.timeline-section {
+  padding: 80px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+  color: #fff;
+}
+
+.section-header h2 {
+  font-size: 42px;
+  margin-bottom: 15px;
+  color: #222;
+  font-weight: 300;
+}
+
+.section-header p {
+  font-size: 18px;
+  color: #ddd;
+  font-style: italic;
+}
+
+/* Timeline Container */
+.timeline-container {
+  position: relative;
+  padding: 40px 0;
+}
+
+/* Vertical Line */
+.timeline-container::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  background-color: #8c9a85;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1px;
+}
+
+/* Timeline Items */
+.timeline-item {
+  position: relative;
+  margin-bottom: 100px;
+}
+
+/* Last item spacing fix */
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Timeline Dots */
+.timeline-dot {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: #a5c1a9;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  z-index: 5;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+}
+
+/* Timeline Dates */
+.timeline-date {
+  position: absolute;
+  background-color: #fff;
+  color: #e2b3b3;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 4;
+  text-align: center;
+  min-width: 180px;
+  top: 0;
+}
+
+.timeline-item:nth-child(odd) .timeline-date {
+  right: 55%;
+}
+
+.timeline-item:nth-child(even) .timeline-date {
+  left: 55%;
+}
+
+/* Timeline Content and Images */
+.timeline-content {
+  position: relative;
+  width: 45%;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  margin-top: 60px;
+}
+
+.timeline-content h3 {
+  color: #998e76;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.timeline-content p {
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.timeline-verse {
+  font-style: italic;
+  color: #9c7e6c;
+}
+
+.timeline-img-container {
+  width: 45%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 3px solid #fff;
+  margin-top: 60px;
+}
+
+.timeline-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Alternating Layout */
+.timeline-item:nth-child(odd) .timeline-content {
+  float: left;
+  text-align: right;
+}
+
+.timeline-item:nth-child(odd) .timeline-img-container {
+  float: right;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  float: right;
+  text-align: left;
+}
+
+.timeline-item:nth-child(even) .timeline-img-container {
+  float: left;
+}
+
+/* Clearfix */
+.timeline-item::after {
+  content: "";
+  display: table;
+  clear: both;
+}

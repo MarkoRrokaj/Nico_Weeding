@@ -1173,7 +1173,6 @@ section {
   background-color: rgba(255, 255, 255, 0.95);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   transition: var(--transition);
-  padding: 15px 0;
 }
 
 .nav-container {
@@ -1794,4 +1793,181 @@ section {
   content: "";
   display: table;
   clear: both;
+}
+
+/* ------------------------------ Mobile Responsiveness ------------------------------ */
+
+@media screen and (max-width: 768px) {
+  .main-nav {
+    padding: 2px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-container {
+    display: none;
+  }
+
+  .nav-logo {
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+/* Small Mobile Devices */
+@media screen and (max-width: 480px) {
+}
+
+/* Mobile First Approach - Base styles above remain the same */
+
+/* Small devices (phones, 480px and below) */
+@media screen and (max-width: 480px) {
+  .hero h1 {
+    font-size: 32px;
+    top: 15px;
+  }
+
+  .details-overlay {
+    padding: 15px;
+    max-width: 90%;
+  }
+
+  .details-overlay h2 {
+    font-size: 24px;
+  }
+
+  .details-overlay p {
+    font-size: 16px;
+  }
+
+  .banner-title-top {
+    font-size: 1.8rem;
+  }
+
+  .banner-title-bottom {
+    font-size: 3rem;
+  }
+
+  .member-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .party-members {
+    gap: 20px;
+  }
+
+  .faq-title {
+    font-size: 32px;
+  }
+
+  .faq-question {
+    font-size: 16px;
+  }
+}
+
+/* Medium devices (tablets, 768px and below) */
+@media screen and (max-width: 768px) {
+  nav {
+    padding: 10px 0;
+  }
+
+  .hero {
+    height: 70vh;
+  }
+
+  .wedding-banner {
+    height: 50vh;
+  }
+
+  .categories {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .category {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .timeline-container::after {
+    left: 31px;
+  }
+
+  .timeline-content {
+    width: 85%;
+    float: right;
+    margin-left: 45px;
+  }
+
+  .timeline-dot {
+    left: 31px;
+  }
+
+  .timeline-date {
+    left: 85px !important;
+    right: auto !important;
+  }
+
+  .timeline-img-container {
+    width: 85%;
+    float: right;
+    margin-left: 45px;
+  }
+}
+
+/* Large devices (laptops/desktops, 1024px and below) */
+@media screen and (max-width: 1024px) {
+  .party-members {
+    gap: 30px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+
+  .travel-container {
+    grid-template-columns: repeat(1´, 1fr);
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and below) */
+@media screen and (max-width: 1200px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .hero-content {
+    max-width: 90%;
+  }
+}
+
+/* Landscape Mode */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  .hero {
+    height: 100vh;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .details-overlay {
+    padding: 10px;
+  }
+}
+
+/* Print styles */
+@media print {
+  .nav-toggle,
+  .social-links,
+  .back-to-top {
+    display: none;
+  }
 }

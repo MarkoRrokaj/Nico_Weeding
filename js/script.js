@@ -294,6 +294,105 @@ function updateCountdown() {
           `;
 }
 
+// RSVP Functions
+
+const name = document.getElementById("name").value;
+const mainRsvpRadios = document.querySelectorAll('input[name="main_rsvp"]');
+const detailsFieldset = document.getElementById("detailsFieldset");
+const dietaryRadios = document.getElementsByName("has_dietary");
+const dietaryText = document.getElementById("dietaryText");
+
+// Enable or disable fieldset based on RSVP main choice
+mainRsvpRadios.forEach((radio) => {
+  radio.addEventListener("change", () => {
+    detailsFieldset.disabled = radio.value === "No";
+  });
+});
+
+// Show/hide dietary textarea
+dietaryRadios.forEach((radio) => {
+  radio.addEventListener("change", () => {
+    dietaryText.style.display = radio.value === "Yes" ? "block" : "none";
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Ensure the "No" option for the main RSVP is selected by default
+  const mainRsvpRadios = document.querySelectorAll('input[name="main_rsvp"]');
+  mainRsvpRadios.forEach((radio) => {
+    if (radio.value === "No") {
+      radio.checked = true;
+    }
+  });
+
+  document
+    .getElementById("rsvpForm")
+    .addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const mainRSVP = document.querySelector(
+        'input[name="main_rsvp"]:checked'
+      ).value;
+
+      let message;
+      if (mainRSVP === "Yes") {
+        const welcomeParty =
+          document.querySelector('input[name="welcome_party"]:checked')
+            ?.value || "No response";
+        const ceremony =
+          document.querySelector('input[name="ceremony"]:checked')?.value ||
+          "No response";
+        const hasDietary =
+          document.querySelector('input[name="has_dietary"]:checked')?.value ||
+          "No";
+        const diet =
+          hasDietary === "Yes"
+            ? document.getElementById("diet").value || "Not specified"
+            : "None";
+
+        message = `Dear Nico and Shini,
+
+Thank you so much for the kind invitation to your wedding!
+
+Here is my RSVP:
+- Attending: Yes
+- Welcome Party (26th Sept): ${welcomeParty}
+- Ceremony & Reception (27th Sept): ${ceremony}
+- Dietary requirements: ${diet}
+
+Wishing you all the best as you prepare for your big day!
+
+Warm regards,  
+${name}`;
+      } else {
+        message = `Dear Nico and Shini,
+
+Thank you so much for the kind invitation to your wedding!
+
+Unfortunately, I won’t be able to attend, but I’m wishing you both a beautiful and memorable wedding day!
+
+Warm regards,  
+${name}`;
+      }
+
+      emailjs
+        .send("service_jn6cwza", "template_8lpsqz9", {
+          name: document.getElementById("name").value,
+          rsvp_message: message,
+        })
+        .then(() => {
+          alert("RSVP sent successfully!");
+          const form = document.getElementById("rsvpForm");
+          form.reset();
+          dietaryText.style.display = "none";
+        })
+        .catch((error) => {
+          alert("Failed to send RSVP: " + JSON.stringify(error));
+        });
+    });
+}); // End of DOMContentLoaded listener
+
 // Add countdown to the hero section
 const detailsOverlay = document.querySelector(".details-overlay");
 if (detailsOverlay) {
@@ -316,6 +415,22 @@ function animateOnScroll() {
       element.classList.add("fade-in");
     }
   });
+}
+
+function openOverlay() {
+  document.getElementById("transportOverlay").style.display = "flex";
+}
+
+function closeOverlay() {
+  document.getElementById("transportOverlay").style.display = "none";
+}
+
+function openEatOverlay() {
+  document.getElementById("eatOverlay").style.display = "flex";
+}
+
+function closeEatOverlay() {
+  document.getElementById("eatOverlay").style.display = "none";
 }
 
 window.addEventListener("scroll", animateOnScroll);

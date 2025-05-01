@@ -7,11 +7,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./css/styles.css">
+    <!-- <script type="module">import emailjs from 'https://cdn.emailjs.com/dist/email.min.js'; -->
+        <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+        <script>
+          // Initialize EmailJS with your public key
+          (function () {
+            emailjs.init("6E4t6gnq3E5YHeCTN"); // Replace with your EmailJS public key
+          })();
+        </script>
+</script>
+
 </head>
 <body>
     <header>
         <nav class="main-nav" id="main-nav">
-            <div class="nav-logo">S&N</div>
+            <div class="nav-logo"><img src="images/logo.png" alt="logo"></div>
             <div class="nav-container">
                 <div class="nav-toggle" id="nav-toggle">
                     <span></span>
@@ -134,28 +144,28 @@
                 <div class="detail-icon">
                     <i class="fas fa-church"></i>
                 </div>
-                <h3>Ceremony</h3>
-                <p class="detail-time">12:00</p>
-                <p class="detail-location">Piazza Del Papa</p>
-                <p class="detail-address">Via Posatora 17, Ancona, Italy</p>
+                <h3>Welcome Party</h3>
+                <p class="detail-time">18:00</p>
+                <p class="detail-location"><a href="#">Dress Code Required</a></p>
+                <p class="detail-address">-</p>
             </div>
             <div class="detail-card">
                 <div class="detail-icon">
                     <i class="fas fa-glass-cheers"></i>
                 </div>
-                <h3>Reception</h3>
-                <p class="detail-time">14:00</p>
-                <p class="detail-location">RAVAL</p>
-                <p class="detail-address">Piazza del Papa, Ancona, Italy</p>
+                <h3>Cerimony</h3>
+                <p class="detail-time">AM</p>
+                <p class="detail-location">-</p>
+                <p class="detail-address">-</p>
             </div>
             <div class="detail-card">
                 <div class="detail-icon">
                     <i class="fas fa-calendar-day"></i>
                 </div>
-                <h3>Date</h3>
-                <p class="detail-date">September 26, 2025</p>
-                <p class="detail-day">Friday</p>
-                <p class="detail-dress">Formal Attire</p>
+                <h3>Reception</h3>
+                <p class="detail-date">PM</p>
+                <p class="detail-day">-</p>
+                <p class="detail-dress">-</p>
             </div>
         </div>
     </section>
@@ -314,20 +324,119 @@
             </div>
             <div class="category">
                 <div class="category-icon">
-                    <i class="fas fa-car"></i>
+                  <i class="fas fa-car"></i>
                 </div>
                 <h3>Transportation</h3>
                 <p>Getting to and around Ancona</p>
-                <button class="btn travel-btn">View Options</button>
-            </div>
-            <div class="category">
+                <button class="btn travel-btn" onclick="openOverlay()">View Options</button>
+              </div>
+              
+              <!-- Fullscreen overlay -->
+              <div id="transportOverlay" class="transport-overlay">
+                <div class="transport-overlay-content">
+                  <button class="close-btn" onclick="closeOverlay()">&times;</button>
+                  <h2>Transportation Details</h2>
+                  <p>
+                    There will be bus services from Portonovo to Ancona city centre at the end of September 2025. The Conerobus Line 94 operates
+                    daily between Portonovo and Ancona, with the first bus departing at 07:35 and the last at 18:25. The frequency ranges from every
+                    15 to 45 minutes, depending on the time of day.
+                  </p>
+                  <p>
+                    The journey typically takes around 39 minutes, covering 35 stops from Piazzetta di Portonovo (5 min walk from wedding location) to
+                    Stazione F.S. (Ancona's main train station).
+                  </p>
+                  <p>
+                    This makes it a convenient option for reaching Ancona city centre, however, we highly recommend hiring a car or taxi if guests
+                    would like to explore the surrounding areas of the Marche region, including its charming hilltop towns, coastal villages, and beautiful
+                    countryside.
+                  </p>
+                  <p>
+                    <strong>AIRPORT TRANSPORT:</strong><br />
+                    Taxi from Ancona airport to Portonovo (wedding location) are around £40-50 on a 30-40 min ride.<br />
+                    To book a taxi ride to and from Ancona airport, please contact the following companies:<br />
+                    CTF Consorzio Taxi Falconara / Tel: +39 334 1548899 / Website: <a href="https://www.ctftaxi.it" target="_blank">www.ctftaxi.it</a>
+                  </p>
+                  <p>
+                    The Raffaello Aerobus is a shuttle bus service from/to Ancona (Piazza Cavour, Railway Station and Torrette) available from 7 am to 10:30 pm.<br />
+                    Tickets can be purchased directly on board the bus at a cost of €3.30 to Falconara and €5.50 to Ancona.
+                  </p>
+                  <p>
+                    <strong>RAILWAY STATION TRANSPORT:</strong><br />
+                    Taxi from Ancona station to Portonovo (wedding location) are around £25-30 on a 15-20 min ride.<br />
+                    To book a taxi ride to and from Ancona train station, please contact the following:<br />
+                    Taxi Ancona Stazione / Tel: +39 07143321 / Website: <a href="https://www.taxi-ancona.it" target="_blank">www.taxi-ancona.it</a> / Email: <a href="mailto:info@taxi-ancona.it">info@taxi-ancona.it</a>
+                  </p>
+                </div>
+              </div>              
+              <div class="category">
                 <div class="category-icon">
-                    <i class="fas fa-utensils"></i>
+                  <i class="fas fa-utensils"></i>
                 </div>
                 <h3>Places to Eat</h3>
                 <p>Restaurants and dining options</p>
-                <button class="btn travel-btn">View Options</button>
-            </div>
+                <button class="btn travel-btn" onclick="openEatOverlay()">View Options</button>
+              </div>
+              
+              <!-- Fullscreen overlay for dining -->
+              <div id="eatOverlay" class="transport-overlay">
+                <div class="transport-overlay-content">
+                  <button class="close-btn" onclick="closeEatOverlay()">&times;</button>
+                  <h2>Dining Options in and around Ancona</h2>
+              
+                  <h3>🍽 Ristorante Marcello</h3>
+                  <p>
+                    Ristorante Marcello is a renowned family-run seafood restaurant located in the picturesque Bay of Portonovo, nestled between the lush greenery of Mount Conero and the azure Adriatic Sea. Established over 40 years ago by Marcello, the restaurant is now managed by his son Giovanni, continuing a rich tradition of hospitality and culinary excellence.
+                  </p>
+                  <p>
+                    The restaurant offers a menu that highlights fresh, locally sourced seafood, including specialties like "ciavattoni with mussels," clams, squid, and prawns. Guests can dine in a charming setting, with 80 indoor seats and 40 outdoor seats, enjoying views of the sea and the surrounding nature.<br />
+                    👉 <a href="https://illaghetto.com/en/restaurant/" target="_blank">Visit Ristorante Marcello</a>
+                    <!-- <img src="images/logo-marcello.png" alt="Logo Marcello"> -->
+                  </p>
+              
+                  <h3>🍕 Pizzeria Avalon</h3>
+                  <p>
+                    Pizzeria Avalon is a celebrated pizzeria located in Ancona, Italy, renowned for its high-quality, creative pizzas and commitment to using alternative flours, including gluten-free options. Established in 2014 by Lorenzo Stecconi and Paolo Saggese, the pizzeria has earned recognition for its culinary excellence.
+                  </p>
+                  <p>
+                    The menu features a variety of pizzas, such as the "Verace" made with mozzarella di bufala DOP, and seasonal specialties that showcase local ingredients. They also serve artisanal desserts like tiramisù and semifreddos.<br />
+                    👉 <a href="https://avalonpizzeria.it/" target="_blank">Visit Pizzeria Avalon</a>
+                  </p>
+              
+                  <h3>🍣 Clandestino Susci Bar</h3>
+                  <p>
+                    Clandestino Susci Bar is a renowned beachside restaurant located in Portonovo Bay, Ancona. Founded in 2000 by Michelin-starred chef Moreno Cedroni, it blends the informal charm of a beach kiosk with innovative gourmet cuisine. 
+                  </p>
+                  <p>
+                    The restaurant is known for its creative take on sushi—called “susci”—that uses Italian ingredients and culinary techniques. It has received acclaim from the MICHELIN Guide, Gambero Rosso, and L’Espresso.<br />
+                    🏅 <strong>Award-winning</strong> seafood and scenic views.
+                    <br>
+                    👉 <a href="https://www.morenocedroni.it/en/clandestino/" target="_blank">Visit Clandestino</a>
+                  </p>
+                  <h3>🍸 Raval Cocktail Bar</h3>
+                    <p>
+                    Raval Cocktail Bar is a stylish and vibrant venue located in Piazza del Papa, Ancona's historic city center. Known for its eclectic décor and expertly crafted cocktails, Raval offers a lively atmosphere that attracts both locals and visitors.
+                    </p>
+                    <p>
+                    The bar features a diverse drink menu, including signature cocktails and a selection of fine spirits, making it a popular spot for evening gatherings. In recent years, Piazza del Papa has become a focal point for Ancona's nightlife, hosting various events and activities that enhance its evening appeal.
+                    </p>
+                    <p>
+                    The square is home to several bars and cafés, offering a range of beverages and light bites. The area is known for its vibrant atmosphere, especially during weekends and special events.
+                    </p>
+
+                    <h3>🍷 Elementi Osteria</h3>
+                    <p>
+                    Elementi Osteria is a contemporary and inviting dining spot located in the heart of Ancona. Founded by three passionate young professionals—Marco Pitturi (chef), Matteo Diotallevi (front-of-house), and Mattia Pignataro (business manager)—the restaurant offers a fresh take on traditional Italian cuisine, with a strong focus on seasonal ingredients and locally sourced seafood.
+                    </p>
+                    <p>
+                    Dishes like pappardelle with cod amatriciana, seppie with shellfish, and ricciola with mandarin showcase the kitchen’s creativity and commitment to flavour. The wine list is thoughtfully curated, highlighting natural wines from small producers to perfectly complement the menu.
+                    </p>
+                    <p>
+                    With its modern yet laid-back atmosphere, Elementi Osteria is ideal for a relaxed, high-quality meal in the city. This restaurant comes highly recommended by Nico, as two of the founders are close friends of his—making it an especially meaningful pick for those looking to enjoy local flavours with a personal touch.<br />
+                    👉 <a href="https://www.elementiosteria.it" target="_blank">Visit Elementi Osteria</a>
+                    </p>
+                </div>
+              </div>
+              
             <div class="category">
                 <div class="category-icon">
                     <i class="fas fa-map-marked-alt"></i>
@@ -404,43 +513,64 @@
         </div>
     </section>
 
-    <!-- <section id="registry" class="registry-section">
-        <div class="section-header light">
-            <h2>Registry</h2>
-            <p>Your presence is our present, but if you wish to give a
-                <p>Your presence is our present, but if you wish to give a gift</p>
+    <section id="rsvp" class="rsvp-section">
+        <div class="section-header">
+            <h2>RSVP</h2>
         </div>
-        <div class="registry-container">
-            <div class="registry-card">
-                <div class="registry-logo">
-                    <i class="fas fa-gift"></i>
-                </div>
-                <h3>Amazon Registry</h3>
-                <p>Explore our wishlist</p>
-                <a href="#" class="btn btn-secondary">View Registry</a>
-            </div>
-            <div class="registry-card">
-                <div class="registry-logo">
-                    <i class="fas fa-home"></i>
-                </div>
-                <h3>Crate & Barrel</h3>
-                <p>Help us build our home</p>
-                <a href="#" class="btn btn-secondary">View Registry</a>
-            </div>
-            <div class="registry-card">
-                <div class="registry-logo">
-                    <i class="fas fa-plane"></i>
-                </div>
-                <h3>Honeymoon Fund</h3>
-                <p>Contribute to our adventure</p>
-                <a href="#" class="btn btn-secondary">Contribute</a>
-            </div>
+    <form id="rsvpForm">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="user_name" required />
+    
+        <p>Will you attend the wedding?</p>
+        <div>        
+            <label><input type="radio" name="main_rsvp" value="Yes" required/> Yes</label>
+            <label><input type="radio" name="main_rsvp" value="No" checked /> No</label>
         </div>
-    </section> -->
+    
+        <fieldset id="detailsFieldset" disabled>
+          <p>Welcome Party (26th September):</p>
+          <div>          
+            <label><input type="radio" name="welcome_party" value="Yes"required /> Yes</label>
+            <label><input type="radio" name="welcome_party" value="No" required/> No</label>
+        </div>
+    
+        <p>Ceremony & Reception (27th September):</p>
+          <div>
+            <label><input type="radio" name="ceremony" value="Yes" required/> Yes</label>
+            <label><input type="radio" name="ceremony" value="No" required/> No</label>
+        </div>
+        <p>Do you have any allergy or dietary requirements?</p>
+        <p>Please let us know if you have any specific dietary needs. <br> See below for the draft of the menu:</p>
+        
+        <ul class="custom-list">
+          <li>
+            On the 26<sup>th</sup> <strong>(Welcome Party)</strong>: A variety of dishes will be served, including seafood, meats, and vegetarian options.
+          </li>
+          <li>
+            On the 27<sup>th</sup> <strong>(Ceremony & Reception)</strong>: The menu will be seafood-focused — a true celebration of Portonovo's coastal flavors.
+          </li>
+        </ul>
+        
+          
+          <div>
+            <label><input type="radio" name="has_dietary" value="Yes" required/> Yes</label>
+            <label><input type="radio" name="has_dietary" value="No" required/> No</label>
+        </div>
+    
+          <div id="dietaryText" style="display: none;">
+            <label for="diet">Please specify:</label><br />
+            <textarea id="diet" rows="3" cols="40" required></textarea>
+          </div>
+        </fieldset>
+    
+        <br />
+        <button type="submit">Submit RSVP</button>
+      </form>
+    </section>
 
     <footer class="footer-section">
         <div class="footer-content">
-            <div class="footer-logo">S & N</div>
+            <div class="footer-logo"><img src="images/logo.png" alt="logo"></div>
             <p class="wedding-date">September 26, 2025</p>
             <div class="social-links">
                 <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>

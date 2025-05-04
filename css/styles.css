@@ -1718,13 +1718,12 @@ section {
   font-style: italic;
 }
 
-/* Timeline Container */
+/* TIMELINE BASE STYLES */
 .timeline-container {
   position: relative;
   padding: 40px 0;
 }
 
-/* Vertical Line */
 .timeline-container::after {
   content: "";
   position: absolute;
@@ -1733,21 +1732,30 @@ section {
   top: 0;
   bottom: 0;
   left: 50%;
-  margin-left: -1px;
+  transform: translateX(-50%);
 }
 
-/* Timeline Items */
 .timeline-item {
-  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12%;
   margin-bottom: 100px;
+  position: relative;
+  flex-wrap: wrap;
 }
 
-/* Last item spacing fix */
+.odd {
+  justify-content: start;
+}
+
+.even {
+  justify-content: end;
+}
+
 .timeline-item:last-child {
   margin-bottom: 0;
 }
 
-/* Timeline Dots */
 .timeline-dot {
   position: absolute;
   width: 30px;
@@ -1755,15 +1763,15 @@ section {
   background-color: #a5c1a9;
   border: 5px solid #fff;
   border-radius: 50%;
-  z-index: 5;
   left: 50%;
   transform: translateX(-50%);
   top: 0;
+  z-index: 5;
 }
 
-/* Timeline Dates */
 .timeline-date {
   position: absolute;
+  top: 0;
   background-color: #fff;
   color: #e2b3b3;
   font-weight: bold;
@@ -1771,28 +1779,25 @@ section {
   border-radius: 30px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   z-index: 4;
-  text-align: center;
   min-width: 180px;
-  top: 0;
+  text-align: center;
 }
 
 .timeline-item:nth-child(odd) .timeline-date {
-  right: 55%;
+  right: calc(55% + 10px);
 }
 
 .timeline-item:nth-child(even) .timeline-date {
-  left: 55%;
+  left: calc(55% + 10px);
 }
 
-/* Timeline Content and Images */
 .timeline-content {
-  position: relative;
-  width: 45%;
-  padding: 20px;
+  width: 40%;
   background-color: #fff;
+  padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  margin-top: 60px;
+  text-align: center;
 }
 
 .timeline-content h3 {
@@ -1806,18 +1811,12 @@ section {
   margin-bottom: 8px;
 }
 
-.timeline-verse {
-  font-style: italic;
-  color: #9c7e6c;
-}
-
 .timeline-img-container {
-  width: 45%;
-  height: 200px;
+  width: 20%;
+  max-height: 240px;
   overflow: hidden;
   border-radius: 8px;
   border: 3px solid #fff;
-  margin-top: 60px;
 }
 
 .timeline-img-container img {
@@ -1826,34 +1825,7 @@ section {
   object-fit: cover;
 }
 
-/* Alternating Layout */
-.timeline-item:nth-child(odd) .timeline-content {
-  float: left;
-  text-align: right;
-}
-
-.timeline-item:nth-child(odd) .timeline-img-container {
-  float: right;
-}
-
-.timeline-item:nth-child(even) .timeline-content {
-  float: right;
-  text-align: left;
-}
-
-.timeline-item:nth-child(even) .timeline-img-container {
-  float: left;
-}
-
-/* Clearfix */
-.timeline-item::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 /* RSVP FORM */
-
 /* General styles for the form */
 #rsvpForm {
   width: 100%;
@@ -2176,4 +2148,53 @@ textarea {
   border: 1px solid #ccc;
   border-radius: 6px;
   resize: vertical;
+}
+
+@media (max-width: 768px) {
+  /* Stack timeline items vertically */
+  .timeline-item {
+    align-items: center;
+    text-align: center;
+    gap: 20px; /* Space between content and image */
+  }
+
+  /* Make both image container and content take 90% width */
+  .timeline-content,
+  .timeline-img-container {
+    width: 90%;
+  }
+
+  /* Timeline Container Line */
+  .timeline-container::after {
+    left: 20px; /* Move line to the left */
+  }
+
+  .timeline-img-container img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+  }
+
+  /* Timeline Dot */
+  .timeline-dot {
+    left: 0px; /* Align dot to the line */
+    transform: none;
+  }
+
+  .timeline-content {
+    width: 80%;
+    position: relative;
+  }
+
+  /* Position the date relative to the timeline-content */
+  .timeline-date {
+    position: relative !important;
+    width: auto !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    right: auto !important;
+    display: inline-block !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+  }
 }

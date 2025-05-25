@@ -1156,27 +1156,26 @@ ul.custom-list li {
     z-index: 10;
   }
 
-  .timeline-date {
-    position: absolute;
-    top: -50px;
-    left: 10px;
-    min-width: 140px;
-    width: 80%;
-    margin: 0px 0px;
-  }
-
   .timeline-item:nth-child(even) .timeline-date {
-    left: calc(0% + 10px);
+    left: calc(5% + 10px);
   }
 
   .timeline-item:nth-child(odd) .timeline-date {
-    right: calc(0% + 0px);
+    right: calc(5% + 0px);
   }
 
   .timeline-img-container {
     width: 50%;
     margin: 15px auto;
     z-index: 10;
+  }
+
+  .timeline-date {
+    position: absolute;
+    top: -50px;
+    min-width: 140px;
+    width: 80%;
+    margin: 0px 0px;
   }
 
   .timeline-img-container img {

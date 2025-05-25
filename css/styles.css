@@ -1156,14 +1156,6 @@ ul.custom-list li {
     z-index: 10;
   }
 
-  .timeline-item:nth-child(even) .timeline-date {
-    left: calc(5% + 10px);
-  }
-
-  .timeline-item:nth-child(odd) .timeline-date {
-    right: calc(5% + 0px);
-  }
-
   .timeline-img-container {
     width: 50%;
     margin: 15px auto;
@@ -1171,11 +1163,10 @@ ul.custom-list li {
   }
 
   .timeline-date {
-    position: absolute;
-    top: -50px;
+    text-align: center;
+    margin: 10px auto;
     min-width: 140px;
-    width: 80%;
-    margin: 0px 0px;
+    position: initial;
   }
 
   .timeline-img-container img {

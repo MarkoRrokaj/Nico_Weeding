@@ -197,15 +197,15 @@ document.querySelector(".back-to-top").addEventListener("click", function (e) {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-// Add parallax effect to hero section
-window.addEventListener("scroll", function () {
-  const hero = document.querySelector(".hero");
-  const scrollPosition = window.pageYOffset;
+// // Add parallax effect to hero section
+// window.addEventListener("scroll", function () {
+//   const hero = document.querySelector(".hero");
+//   const scrollPosition = window.pageYOffset;
 
-  if (hero) {
-    hero.style.backgroundPosition = `center ${scrollPosition * 0.5}px`;
-  }
-});
+//   if (hero) {
+//     hero.style.backgroundPosition = `center ${scrollPosition * 0.5}px`;
+//   }
+// });
 
 // Animate timeline items on scroll
 const timelineItems = document.querySelectorAll(".timeline-item");
@@ -228,19 +228,6 @@ function checkInView() {
 window.addEventListener("scroll", checkInView);
 // Initial check
 checkInView();
-
-// Add hover effects for travel guide categories
-document.querySelectorAll(".category").forEach((category) => {
-  category.addEventListener("mouseenter", function () {
-    this.style.transform = "translateY(-10px)";
-    this.style.boxShadow = "0 10px 20px rgba(0,0,0,0.2)";
-  });
-
-  category.addEventListener("mouseleave", function () {
-    this.style.transform = "translateY(0)";
-    this.style.boxShadow = "0 0 0 rgba(0,0,0,0)";
-  });
-});
 
 // Add sticky navigation on scroll
 const nav = document.querySelector("nav");

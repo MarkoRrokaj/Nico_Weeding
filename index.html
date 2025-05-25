@@ -190,40 +190,40 @@
         
         <div class="wedding-party girls">
             <h3 class="party-subtitle">The Girls</h3>
-            <div class="party-members">
+            <div class="party-members party-members-girls">
                 <div class="party-member">
                     <div class="member-img-container">
-                        <img src="./images/ellen.jpeg" alt="Ellen" class="member-image">
+                        <img src="images/ellen.jpeg" alt="Ellen" class="member-image">
                     </div>
                     <h4 class="member-name">Ellen</h4>
                 </div>
                 <div class="party-member">
                     <div class="member-img-container">
-                        <img src="./images/diya.jpeg" alt="Diya" class="member-image">
+                        <img src="images/diya.jpeg" alt="Diya" class="member-image">
                     </div>
                     <h4 class="member-name">Diya</h4>
                 </div>
                 <div class="party-member">
                     <div class="member-img-container">
-                        <img src="./images/stefania.jpeg" alt="Stefania" class="member-image">
+                        <img src="images/stefania.jpeg" alt="Stefania" class="member-image">
                     </div>
                     <h4 class="member-name">Stefania</h4>
                 </div>
                 <div class="party-member">
                     <div class="member-img-container">
-                        <img src="./images/lauren.jpeg" alt="Lauren" class="member-image">
+                        <img src="images/lauren.jpeg" alt="Lauren" class="member-image">
                     </div>
                     <h4 class="member-name">Lauren</h4>
                 </div>
                 <div class="party-member">
                     <div class="member-img-container">
-                        <img src="./images/vale.jpeg" alt="Valentina" class="member-image">
+                        <img src="images/vale.jpeg" alt="Valentina" class="member-image">
                     </div>
                     <h4 class="member-name">Valentina</h4>
                 </div>
                 <div class="party-member">
                     <div class="member-img-container">
-                        <img src="./images/nanthana.jpeg" alt="Nanthana" class="member-image">
+                        <img src="images/nanthana.jpeg" alt="Nanthana" class="member-image">
                     </div>
                     <h4 class="member-name">Nanthana</h4>
                 </div>
@@ -235,49 +235,49 @@
             <div class="party-members">
                 <div class="party-member">
                     <div class="member-img-container">
-                        <img src="./images/cope.jpeg" alt="Francesco" class="member-image">
+                        <img src="images/cope.jpeg" alt="Francesco" class="member-image">
                     </div>
                     <h4 class="member-name">Francesco</h4>
                 </div>
                 <div class="party-member">
                     <div class="member-img-container">
-                        <img src="./images/gio.jpeg" alt="Giole" class="member-image">
+                        <img src="images/gio.jpeg" alt="Giole" class="member-image">
                     </div>
                     <h4 class="member-name">Giole</h4>
                 </div>
                 <div class="party-member">
                     <div class="member-img-container">
-                        <img src="./images/maccy.jpeg" alt="Mathias" class="member-image">
+                        <img src="images/maccy.jpeg" alt="Mathias" class="member-image">
                     </div>
                     <h4 class="member-name">Mathias</h4>
                 </div>
                 <div class="party-member">
                     <div class="member-img-container">
-                        <img src="./images/wedd.jpeg" alt="Medji" class="member-image">
+                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=300&h=300&fit=crop&crop=face" alt="Medji" class="member-image">
                     </div>
                     <h4 class="member-name">Medji</h4>
                 </div>
                 <div class="party-member">
                     <div class="member-img-container">
-                        <img src="./images/wedd.jpeg" alt="Jake" class="member-image">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face" alt="Jake" class="member-image">
                     </div>
                     <h4 class="member-name">Jake</h4>
                 </div>
                 <div class="party-member">
                     <div class="member-img-container">
-                        <img src="./images/tibor.jpeg" alt="Tibor" class="member-image">
+                        <img src="images/tibor.jpeg" alt="Tibor" class="member-image">
                     </div>
                     <h4 class="member-name">Tibor</h4>
                 </div>
                 <div class="party-member">
                     <div class="member-img-container">
-                        <img src="./images/roland.jpeg" alt="Roland" class="member-image">
+                        <img src="images/roland.jpeg" alt="Roland" class="member-image">
                     </div>
                     <h4 class="member-name">Roland</h4>
                 </div>
                 <div class="party-member">
                     <div class="member-img-container">
-                        <img src="./images/marko.jpg" alt="Marko" class="member-image">
+                        <img src="images/marko.jpg" alt="Marko" class="member-image">
                     </div>
                     <h4 class="member-name">Marko</h4>
                 </div>
@@ -290,140 +290,187 @@
             <h2>Travel Guide</h2>
             <p>Plan your visit to Ancona, Italy</p>
         </div>
+        
         <div class="travel-container">
             <div class="category">
                 <div class="category-icon">
                     <i class="fas fa-bed"></i>
                 </div>
                 <h3>Lodging</h3>
-                <p>Find the perfect place to stay during your visit</p>
-                <button class="btn travel-btn">View Options</button>
+                <p>Find the perfect place to stay during your visit to beautiful Ancona</p>
+                <button class="travel-btn" onclick="openLodgingOverlay()">Options</button>
             </div>
+            
             <div class="category">
                 <div class="category-icon">
-                  <i class="fas fa-car"></i>
+                    <i class="fas fa-car"></i>
                 </div>
                 <h3>Transportation</h3>
-                <p>Getting to and around Ancona</p>
-                <button class="btn travel-btn" onclick="openOverlay()">View Options</button>
-              </div>
-              
-              <!-- Fullscreen overlay -->
-              <div id="transportOverlay" class="transport-overlay">
-                <div class="transport-overlay-content">
-                  <button class="close-btn" onclick="closeOverlay()">&times;</button>
-                  <h2>Transportation Details</h2>
-                  <p>
-                    There will be bus services from Portonovo to Ancona city centre at the end of September 2025. The Conerobus Line 94 operates
-                    daily between Portonovo and Ancona, with the first bus departing at 07:35 and the last at 18:25. The frequency ranges from every
-                    15 to 45 minutes, depending on the time of day.
-                  </p>
-                  <p>
-                    The journey typically takes around 39 minutes, covering 35 stops from Piazzetta di Portonovo (5 min walk from wedding location) to
-                    Stazione F.S. (Ancona's main train station).
-                  </p>
-                  <p>
-                    This makes it a convenient option for reaching Ancona city centre, however, we highly recommend hiring a car or taxi if guests
-                    would like to explore the surrounding areas of the Marche region, including its charming hilltop towns, coastal villages, and beautiful
-                    countryside.
-                  </p>
-                  <p>
-                    <strong>AIRPORT TRANSPORT:</strong><br />
-                    Taxi from Ancona airport to Portonovo (wedding location) are around £40-50 on a 30-40 min ride.<br />
-                    To book a taxi ride to and from Ancona airport, please contact the following companies:<br />
-                    CTF Consorzio Taxi Falconara / Tel: +39 334 1548899 / Website: <a href="https://www.ctftaxi.it" target="_blank">www.ctftaxi.it</a>
-                  </p>
-                  <p>
-                    The Raffaello Aerobus is a shuttle bus service from/to Ancona (Piazza Cavour, Railway Station and Torrette) available from 7 am to 10:30 pm.<br />
-                    Tickets can be purchased directly on board the bus at a cost of €3.30 to Falconara and €5.50 to Ancona.
-                  </p>
-                  <p>
-                    <strong>RAILWAY STATION TRANSPORT:</strong><br />
-                    Taxi from Ancona station to Portonovo (wedding location) are around £25-30 on a 15-20 min ride.<br />
-                    To book a taxi ride to and from Ancona train station, please contact the following:<br />
-                    Taxi Ancona Stazione / Tel: +39 07143321 / Website: <a href="https://www.taxi-ancona.it" target="_blank">www.taxi-ancona.it</a> / Email: <a href="mailto:info@taxi-ancona.it">info@taxi-ancona.it</a>
-                  </p>
-                </div>
-              </div>              
-              <div class="category">
+                <p>Getting to and around Ancona with ease and comfort</p>
+                <button class="travel-btn" onclick="openTransportOverlay()">Options</button>
+            </div>
+            
+            <div class="category">
                 <div class="category-icon">
-                  <i class="fas fa-utensils"></i>
+                    <i class="fas fa-utensils"></i>
                 </div>
                 <h3>Places to Eat</h3>
-                <p>Restaurants and dining options</p>
-                <button class="btn travel-btn" onclick="openEatOverlay()">View Options</button>
-              </div>
-              
-              <!-- Fullscreen overlay for dining -->
-              <div id="eatOverlay" class="transport-overlay">
-                <div class="transport-overlay-content">
-                  <button class="close-btn" onclick="closeEatOverlay()">&times;</button>
-                  <h2>Dining Options in and around Ancona</h2>
-              
-                  <h3>🍽 Ristorante Marcello</h3>
-                  <p>
-                    Ristorante Marcello is a renowned family-run seafood restaurant located in the picturesque Bay of Portonovo, nestled between the lush greenery of Mount Conero and the azure Adriatic Sea. Established over 40 years ago by Marcello, the restaurant is now managed by his son Giovanni, continuing a rich tradition of hospitality and culinary excellence.
-                  </p>
-                  <p>
-                    The restaurant offers a menu that highlights fresh, locally sourced seafood, including specialties like "ciavattoni with mussels," clams, squid, and prawns. Guests can dine in a charming setting, with 80 indoor seats and 40 outdoor seats, enjoying views of the sea and the surrounding nature.<br />
-                    👉 <a href="https://illaghetto.com/en/restaurant/" target="_blank">Visit Ristorante Marcello</a>
-                    <!-- <img src="images/logo-marcello.png" alt="Logo Marcello"> -->
-                  </p>
-              
-                  <h3>🍕 Pizzeria Avalon</h3>
-                  <p>
-                    Pizzeria Avalon is a celebrated pizzeria located in Ancona, Italy, renowned for its high-quality, creative pizzas and commitment to using alternative flours, including gluten-free options. Established in 2014 by Lorenzo Stecconi and Paolo Saggese, the pizzeria has earned recognition for its culinary excellence.
-                  </p>
-                  <p>
-                    The menu features a variety of pizzas, such as the "Verace" made with mozzarella di bufala DOP, and seasonal specialties that showcase local ingredients. They also serve artisanal desserts like tiramisù and semifreddos.<br />
-                    👉 <a href="https://avalonpizzeria.it/" target="_blank">Visit Pizzeria Avalon</a>
-                  </p>
-              
-                  <h3>🍣 Clandestino Susci Bar</h3>
-                  <p>
-                    Clandestino Susci Bar is a renowned beachside restaurant located in Portonovo Bay, Ancona. Founded in 2000 by Michelin-starred chef Moreno Cedroni, it blends the informal charm of a beach kiosk with innovative gourmet cuisine. 
-                  </p>
-                  <p>
-                    The restaurant is known for its creative take on sushi—called “susci”—that uses Italian ingredients and culinary techniques. It has received acclaim from the MICHELIN Guide, Gambero Rosso, and L’Espresso.<br />
-                    🏅 <strong>Award-winning</strong> seafood and scenic views.
-                    <br>
-                    👉 <a href="https://www.morenocedroni.it/en/clandestino/" target="_blank">Visit Clandestino</a>
-                  </p>
-                  <h3>🍸 Raval Cocktail Bar</h3>
-                    <p>
-                    Raval Cocktail Bar is a stylish and vibrant venue located in Piazza del Papa, Ancona's historic city center. Known for its eclectic décor and expertly crafted cocktails, Raval offers a lively atmosphere that attracts both locals and visitors.
-                    </p>
-                    <p>
-                    The bar features a diverse drink menu, including signature cocktails and a selection of fine spirits, making it a popular spot for evening gatherings. In recent years, Piazza del Papa has become a focal point for Ancona's nightlife, hosting various events and activities that enhance its evening appeal.
-                    </p>
-                    <p>
-                    The square is home to several bars and cafés, offering a range of beverages and light bites. The area is known for its vibrant atmosphere, especially during weekends and special events.
-                    </p>
-
-                    <h3>🍷 Elementi Osteria</h3>
-                    <p>
-                    Elementi Osteria is a contemporary and inviting dining spot located in the heart of Ancona. Founded by three passionate young professionals—Marco Pitturi (chef), Matteo Diotallevi (front-of-house), and Mattia Pignataro (business manager)—the restaurant offers a fresh take on traditional Italian cuisine, with a strong focus on seasonal ingredients and locally sourced seafood.
-                    </p>
-                    <p>
-                    Dishes like pappardelle with cod amatriciana, seppie with shellfish, and ricciola with mandarin showcase the kitchen’s creativity and commitment to flavour. The wine list is thoughtfully curated, highlighting natural wines from small producers to perfectly complement the menu.
-                    </p>
-                    <p>
-                    With its modern yet laid-back atmosphere, Elementi Osteria is ideal for a relaxed, high-quality meal in the city. This restaurant comes highly recommended by Nico, as two of the founders are close friends of his—making it an especially meaningful pick for those looking to enjoy local flavours with a personal touch.<br />
-                    👉 <a href="https://www.elementiosteria.it" target="_blank">Visit Elementi Osteria</a>
-                    </p>
-                </div>
-              </div>
-              
+                <p>Discover amazing restaurants and authentic Italian dining</p>
+                <button class="travel-btn" onclick="openEatOverlay()">Options</button>
+            </div>
+            
             <div class="category">
                 <div class="category-icon">
                     <i class="fas fa-map-marked-alt"></i>
                 </div>
                 <h3>Things to Do</h3>
-                <p>Attractions and activities in the area</p>
-                <button class="btn travel-btn">View Options</button>
+                <p>Explore attractions and activities in the beautiful Marche region</p>
+                <button class="travel-btn" onclick="openActivitiesOverlay()">Options</button>
             </div>
         </div>
     </section>
+
+    <!-- Transportation Overlay -->
+    <div id="transportOverlay" class="overlay">
+        <div class="overlay-content">
+            <button class="close-btn" onclick="closeOverlay('transportOverlay')">&times;</button>
+            <h2>Transportation Details</h2>
+            
+            <h3>🚌 Bus Services</h3>
+            <p>
+                There will be bus services from Portonovo to Ancona city centre at the end of September 2025. The Conerobus Line 94 operates
+                daily between Portonovo and Ancona, with the first bus departing at 07:35 and the last at 18:25. The frequency ranges from every
+                15 to 45 minutes, depending on the time of day.
+            </p>
+            <p>
+                The journey typically takes around 39 minutes, covering 35 stops from Piazzetta di Portonovo (5 min walk from wedding location) to
+                Stazione F.S. (Ancona's main train station).
+            </p>
+            <p>
+                This makes it a convenient option for reaching Ancona city centre, however, we highly recommend hiring a car or taxi if guests
+                would like to explore the surrounding areas of the Marche region, including its charming hilltop towns, coastal villages, and beautiful
+                countryside.
+            </p>
+            
+            <h3>✈️ Airport Transport</h3>
+            <p>
+                <strong>Taxi Services:</strong><br />
+                Taxi from Ancona airport to Portonovo (wedding location) are around £40-50 on a 30-40 min ride.<br />
+                To book a taxi ride to and from Ancona airport, please contact:<br />
+                CTF Consorzio Taxi Falconara / Tel: +39 334 1548899 / Website: <a href="https://www.ctftaxi.it" target="_blank">www.ctftaxi.it</a>
+            </p>
+            <p>
+                <strong>Shuttle Bus:</strong><br />
+                The Raffaello Aerobus is a shuttle bus service from/to Ancona (Piazza Cavour, Railway Station and Torrette) available from 7 am to 10:30 pm.<br />
+                Tickets can be purchased directly on board the bus at a cost of €3.30 to Falconara and €5.50 to Ancona.
+            </p>
+            
+            <h3>🚂 Railway Station Transport</h3>
+            <p>
+                <strong>Taxi Services:</strong><br />
+                Taxi from Ancona station to Portonovo (wedding location) are around £25-30 on a 15-20 min ride.<br />
+                To book a taxi ride to and from Ancona train station, please contact:<br />
+                Taxi Ancona Stazione / Tel: +39 071 43321 / Website: <a href="https://www.taxi-ancona.it" target="_blank">www.taxi-ancona.it</a> / Email: <a href="mailto:info@taxi-ancona.it">info@taxi-ancona.it</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Dining Overlay -->
+    <div id="eatOverlay" class="overlay">
+        <div class="overlay-content">
+            <button class="close-btn" onclick="closeOverlay('eatOverlay')">&times;</button>
+            <h2>Dining Options in and around Ancona</h2>
+
+            <h3>🍽️ Ristorante Marcello</h3>
+            <p>
+                Ristorante Marcello is a renowned family-run seafood restaurant located in the picturesque Bay of Portonovo, nestled between the lush greenery of Mount Conero and the azure Adriatic Sea. Established over 40 years ago by Marcello, the restaurant is now managed by his son Giovanni, continuing a rich tradition of hospitality and culinary excellence.
+            </p>
+            <p>
+                The restaurant offers a menu that highlights fresh, locally sourced seafood, including specialties like "ciavattoni with mussels," clams, squid, and prawns. Guests can dine in a charming setting, with 80 indoor seats and 40 outdoor seats, enjoying views of the sea and the surrounding nature.<br />
+                👉 <a href="https://illaghetto.com/en/restaurant/" target="_blank">Visit Ristorante Marcello</a>
+            </p>
+
+            <h3>🍕 Pizzeria Avalon</h3>
+            <p>
+                Pizzeria Avalon is a celebrated pizzeria located in Ancona, Italy, renowned for its high-quality, creative pizzas and commitment to using alternative flours, including gluten-free options. Established in 2014 by Lorenzo Stecconi and Paolo Saggese, the pizzeria has earned recognition for its culinary excellence.
+            </p>
+            <p>
+                The menu features a variety of pizzas, such as the "Verace" made with mozzarella di bufala DOP, and seasonal specialties that showcase local ingredients. They also serve artisanal desserts like tiramisù and semifreddos.<br />
+                👉 <a href="https://avalonpizzeria.it/" target="_blank">Visit Pizzeria Avalon</a>
+            </p>
+
+            <h3>🍣 Clandestino Susci Bar</h3>
+            <p>
+                Clandestino Susci Bar is a renowned beachside restaurant located in Portonovo Bay, Ancona. Founded in 2000 by Michelin-starred chef Moreno Cedroni, it blends the informal charm of a beach kiosk with innovative gourmet cuisine.
+            </p>
+            <p>
+                The restaurant is known for its creative take on sushi—called "susci"—that uses Italian ingredients and culinary techniques. It has received acclaim from the MICHELIN Guide, Gambero Rosso, and L'Espresso.<br />
+                🏅 <strong>Award-winning</strong> seafood and scenic views.<br>
+                👉 <a href="https://www.morenocedroni.it/en/clandestino/" target="_blank">Visit Clandestino</a>
+            </p>
+
+            <h3>🍸 Raval Cocktail Bar</h3>
+            <p>
+                Raval Cocktail Bar is a stylish and vibrant venue located in Piazza del Papa, Ancona's historic city center. Known for its eclectic décor and expertly crafted cocktails, Raval offers a lively atmosphere that attracts both locals and visitors.
+            </p>
+            <p>
+                The bar features a diverse drink menu, including signature cocktails and a selection of fine spirits, making it a popular spot for evening gatherings. The square has become a focal point for Ancona's nightlife, hosting various events and activities that enhance its evening appeal.
+            </p>
+
+            <h3>🍷 Elementi Osteria</h3>
+            <p>
+                Elementi Osteria is a contemporary and inviting dining spot located in the heart of Ancona. Founded by three passionate young professionals—Marco Pitturi (chef), Matteo Diotallevi (front-of-house), and Mattia Pignataro (business manager)—the restaurant offers a fresh take on traditional Italian cuisine, with a strong focus on seasonal ingredients and locally sourced seafood.
+            </p>
+            <p>
+                Dishes like pappardelle with cod amatriciana, seppie with shellfish, and ricciola with mandarin showcase the kitchen's creativity and commitment to flavour. The wine list is thoughtfully curated, highlighting natural wines from small producers to perfectly complement the menu.
+            </p>
+            <p>
+                With its modern yet laid-back atmosphere, Elementi Osteria is ideal for a relaxed, high-quality meal in the city. This restaurant comes highly recommended by Nico, as two of the founders are close friends of his—making it an especially meaningful pick for those looking to enjoy local flavours with a personal touch.<br />
+                👉 <a href="https://www.elementiosteria.it" target="_blank">Visit Elementi Osteria</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Lodging Overlay -->
+    <div id="lodgingOverlay" class="overlay">
+        <div class="overlay-content">
+            <button class="close-btn" onclick="closeOverlay('lodgingOverlay')">&times;</button>
+            <h2>Accommodation Options</h2>
+            <p>We're working on compiling the best lodging options for our guests. Check back soon for recommendations on hotels, B&Bs, and vacation rentals in the Ancona and Portonovo area.</p>
+            <p>In the meantime, we recommend looking for accommodations in:</p>
+            <h3>🏨 Recommended Areas</h3>
+            <p><strong>Portonovo Bay:</strong> Close to the wedding venue with stunning sea views</p>
+            <p><strong>Ancona City Center:</strong> Historic charm with easy access to restaurants and transportation</p>
+            <p><strong>Mount Conero Area:</strong> Peaceful countryside setting with panoramic views</p>
+        </div>
+    </div>
+
+    <!-- Activities Overlay -->
+    <div id="activitiesOverlay" class="overlay">
+        <div class="overlay-content">
+            <button class="close-btn" onclick="closeOverlay('activitiesOverlay')">&times;</button>
+            <h2>Things to Do in Ancona & Marche Region</h2>
+            
+            <h3>🏖️ Beaches & Nature</h3>
+            <p><strong>Portonovo Bay:</strong> One of Italy's most beautiful bays with crystal clear waters and white pebble beaches</p>
+            <p><strong>Mount Conero:</strong> Hiking trails with breathtaking views of the Adriatic coast</p>
+            <p><strong>Spiaggia delle Due Sorelle:</strong> Iconic beach accessible by boat, famous for its twin rock formations</p>
+            
+            <h3>🏛️ Historical & Cultural Sites</h3>
+            <p><strong>Ancona Cathedral:</strong> Stunning Romanesque cathedral with panoramic city views</p>
+            <p><strong>Arch of Trajan:</strong> Ancient Roman arch marking the entrance to the old port</p>
+            <p><strong>Pinacoteca Civica:</strong> Art gallery featuring works from local and international artists</p>
+            
+            <h3>🏘️ Charming Towns</h3>
+            <p><strong>Loreto:</strong> Famous pilgrimage site with beautiful basilica</p>
+            <p><strong>Recanati:</strong> Birthplace of poet Giacomo Leopardi</p>
+            <p><strong>Sirolo:</strong> Picturesque hilltop town overlooking the sea</p>
+            
+            <h3>🍷 Wine & Food Experiences</h3>
+            <p><strong>Verdicchio Wine Tours:</strong> Explore local vineyards and taste the region's famous white wine</p>
+            <p><strong>Local Markets:</strong> Experience authentic Italian market culture in Ancona's city center</p>
+        </div>
+    </div>
 
     <section id="photo-share" class="photo-share-section">
         <div class="section-header">

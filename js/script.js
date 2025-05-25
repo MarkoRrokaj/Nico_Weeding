@@ -403,22 +403,50 @@ function animateOnScroll() {
     }
   });
 }
-
-function openOverlay() {
-  document.getElementById("transportOverlay").style.display = "flex";
-}
-
-function closeOverlay() {
-  document.getElementById("transportOverlay").style.display = "none";
+function openTransportOverlay() {
+  document.getElementById("transportOverlay").classList.add("active");
+  document.body.style.overflow = "hidden";
 }
 
 function openEatOverlay() {
-  document.getElementById("eatOverlay").style.display = "flex";
+  document.getElementById("eatOverlay").classList.add("active");
+  document.body.style.overflow = "hidden";
 }
 
-function closeEatOverlay() {
-  document.getElementById("eatOverlay").style.display = "none";
+function openLodgingOverlay() {
+  document.getElementById("lodgingOverlay").classList.add("active");
+  document.body.style.overflow = "hidden";
 }
 
-window.addEventListener("scroll", animateOnScroll);
-animateOnScroll(); // Initial check
+function openActivitiesOverlay() {
+  document.getElementById("activitiesOverlay").classList.add("active");
+  document.body.style.overflow = "hidden";
+}
+
+function closeOverlay(overlayId) {
+  document.getElementById(overlayId).classList.remove("active");
+  document.body.style.overflow = "auto";
+}
+
+// Close overlay when clicking outside content
+document.querySelectorAll(".overlay").forEach((overlay) => {
+  overlay.addEventListener("click", function (e) {
+    if (e.target === this) {
+      this.classList.remove("active");
+      document.body.style.overflow = "auto";
+    }
+  });
+});
+
+// Close overlay with Escape key
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape") {
+    document.querySelectorAll(".overlay.active").forEach((overlay) => {
+      overlay.classList.remove("active");
+    });
+    document.body.style.overflow = "auto";
+  }
+});
+
+// window.addEventListener("scroll", animateOnScroll);
+// animateOnScroll(); // Initial check

@@ -200,73 +200,116 @@ nav a:hover {
   right: 10px;
 }
 
-.wedding-party {
-  /* Last definition from Global Styles "WEDDING PARTY SECTION" */
-  padding: 60px 20px;
-  text-align: center;
-  font-size: 1.5rem;
-  /* background-color: #bcc8bd; from "THE GIRLS SECTION" is overridden by specific .girls / .guys or lost if no specific class */
+.wedding-party-section {
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #f8f9ff 0%, #f1f4f8 100%);
+  position: relative;
 }
 
-.section-title {
-  /* Last definition from Global Styles "WEDDING PARTY SECTION" */
+.wedding-party-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+      circle at 20% 80%,
+      rgba(120, 119, 198, 0.03) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(255, 119, 198, 0.03) 0%,
+      transparent 50%
+    );
+  pointer-events: none;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  position: relative;
+  z-index: 2;
+}
+
+.section-header h2 {
   font-family: "Playfair Display", serif;
-  font-size: 3rem;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 500;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.section-header p {
+  font-size: 1.2rem;
+  color: #666;
+  font-weight: 300;
+  opacity: 0.8;
+}
+
+.wedding-party {
+  max-width: 1400px;
+  margin: 0 auto 5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.party-subtitle {
+  font-family: "Playfair Display", serif;
+  font-size: 2.2rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 3rem;
   color: #333;
-  margin-bottom: 40px;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.party-subtitle::after {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  border-radius: 1px;
+}
+
+.girls .party-subtitle::after {
+  background: linear-gradient(90deg, #ff9a9e, #fecfef);
+}
+
+.guys .party-subtitle::after {
+  background: linear-gradient(90deg, #4facfe, #00f2fe);
 }
 
 .party-members {
-  /* Last definition from Global Styles "WEDDING PARTY SECTION" */
-  display: flex;
-  justify-content: center;
-  align-items: center; /* Added from global */
-  gap: 40px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  justify-items: center;
+  padding: 0 1rem;
 }
 
-.party-member {
-  /* Last definition from Global Styles "WEDDING PARTY SECTION" */
-  flex: 1 1 250px; /* Overrides 0 1 250px */
-  max-width: 250px; /* Added */
-  text-align: center;
-  /* margin: 0 auto; is lost, but flex properties might handle centering */
+.party-members-girls {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
+  gap: 2.5rem;
+  justify-items: center;
+  padding: 0 1rem;
 }
 
-.member-image {
-  /* Last definition from Global Styles "WEDDING PARTY SECTION" */
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
+.member-img-container img {
+  width: 300px;
+  height: 300px;
   object-fit: cover;
-  margin-bottom: 15px; /* Overrides 20px and no margin-bottom */
-}
-
-.member-name {
-  /* Last definition from Global Styles "WEDDING PARTY SECTION" */
-  font-family: "Playfair Display", serif;
-  font-size: 1.5rem;
-  color: #333;
-  margin-bottom: 5px; /* Overrides margin-top: 10px */
-}
-
-.member-role {
-  /* Last definition from Global Styles "WEDDING PARTY SECTION" */
-  font-family: "Roboto", sans-serif;
-  font-size: 1rem;
-  color: #555;
-}
-
-.wedding-party.girls {
-  /* Last definition from Global Styles */
-  /* background-color: #bfbfbf; */
-  padding: 10px 20px; /* padding was also in .wedding-party, potentially redundant here */
-}
-
-.wedding-party.guys {
-  /* Last definition from Global Styles */
-  /* background-color: #8c9a85; */
-  padding: 30px 20px; /* padding was also in .wedding-party, potentially redundant here */
+  border-radius: 5px;
 }
 
 .travel-guide {
@@ -346,7 +389,7 @@ nav a:hover {
   padding: 2rem;
   max-width: 800px;
   width: 90%;
-  margin: 4rem auto;
+  overflow-y: auto;
   border-radius: 10px;
   color: #333;
   position: relative;
@@ -1080,6 +1123,356 @@ ul.custom-list li {
   margin-bottom: 10px;
 }
 
+/* ------------------------------ AI CODE ------------------------------ */
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #f8f9fa;
+}
+
+.travel-section {
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
+  position: relative;
+  overflow: hidden;
+}
+
+.travel-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.05"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  pointer-events: none;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: white;
+  position: relative;
+  z-index: 2;
+}
+
+.section-header h2 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 300;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  letter-spacing: -1px;
+}
+
+.section-header p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+.travel-container {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: -12% 30%;
+  gap: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.category {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.category:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 1);
+}
+
+.category-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.category:hover .category-icon {
+  transform: rotate(10deg) scale(1.1);
+}
+
+.category-icon i {
+  font-size: 2rem;
+  color: white;
+}
+
+.category h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+  font-weight: 600;
+}
+
+.category p {
+  color: #666;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.travel-btn {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+}
+
+.travel-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.travel-btn:hover::before {
+  left: 100%;
+}
+
+.travel-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+}
+
+.travel-btn:active {
+  transform: translateY(0);
+}
+
+/* Overlay Styles */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  display: none;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 1000;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.overlay.active {
+  display: flex;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.overlay-content {
+  background: white;
+  border-radius: 20px;
+  padding: 3rem;
+  max-width: 900px;
+  width: 100%;
+  margin: 2rem auto;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.4s ease;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.close-btn {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 40px;
+  height: 40px;
+  background: #f1f3f4;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+}
+
+.close-btn:hover {
+  background: #e8eaed;
+  transform: rotate(90deg);
+}
+
+.overlay-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #333;
+  font-weight: 300;
+  border-bottom: 3px solid #667eea;
+  padding-bottom: 1rem;
+}
+
+.overlay-content h3 {
+  font-size: 1.5rem;
+  margin: 2rem 0 1rem;
+  color: #667eea;
+  font-weight: 600;
+}
+
+.overlay-content p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+.overlay-content a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.overlay-content a:hover {
+  color: #764ba2;
+  text-decoration: underline;
+}
+
+.overlay-content strong {
+  color: #333;
+  font-weight: 700;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .travel-section {
+    padding: 1.5rem 1rem;
+  }
+
+  .travel-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .category {
+    padding: 2rem 1.5rem;
+  }
+
+  .overlay {
+    padding: 1rem;
+  }
+
+  .overlay-content {
+    padding: 2rem;
+    margin: 1rem auto;
+  }
+
+  .overlay-content h2 {
+    font-size: 2rem;
+  }
+
+  .section-header h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .category {
+    padding: 1.5rem;
+  }
+
+  .category-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .category-icon i {
+    font-size: 1.5rem;
+  }
+
+  .overlay-content {
+    padding: 1.5rem;
+  }
+
+  .travel-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Custom scrollbar for overlay */
+.overlay-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.overlay-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.overlay-content::-webkit-scrollbar-thumb {
+  background: #667eea;
+  border-radius: 10px;
+}
+
+.overlay-content::-webkit-scrollbar-thumb:hover {
+  background: #764ba2;
+}
+
 /* ------------------------------ Media Queries ------------------------------ */
 
 @media (max-width: 768px) {
@@ -1111,6 +1504,10 @@ ul.custom-list li {
   .party-member {
     /* This was defined twice, keeping one */
     margin-bottom: 30px;
+  }
+
+  .party-members-girls {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 
   #rsvpForm {

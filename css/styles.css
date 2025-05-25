@@ -1159,14 +1159,18 @@ ul.custom-list li {
   .timeline-date {
     position: absolute;
     top: -50px;
-    left: 1px;
+    left: 10px;
     min-width: 140px;
     width: 80%;
-    margin: 10px;
+    margin: 0px 0px;
   }
 
   .timeline-item:nth-child(even) .timeline-date {
-    left: calc(0% + 0px);
+    left: calc(0% + 10px);
+  }
+
+  .timeline-item:nth-child(odd) .timeline-date {
+    right: calc(0% + 0px);
   }
 
   .timeline-img-container {

@@ -1083,6 +1083,7 @@ ul.custom-list li {
 /* ------------------------------ Media Queries ------------------------------ */
 
 @media (max-width: 768px) {
+  /* Last media query block */
   .wedding-banner {
     /* This was defined twice, keeping one */
     padding-left: 5%;
@@ -1125,10 +1126,7 @@ ul.custom-list li {
     /* Combined from original split */
     max-width: 100%;
   }
-}
 
-@media screen and (max-width: 768px) {
-  /* Last media query block */
   .main-nav {
     padding: 2px;
   }
@@ -1167,6 +1165,15 @@ ul.custom-list li {
     margin: 10px auto;
     min-width: 140px;
     position: initial;
+    width: 60%;
+  }
+
+  .timeline-item {
+    display: table;
+  }
+
+  .timeline-container::after {
+    z-index: -100000;
   }
 
   .timeline-img-container img {

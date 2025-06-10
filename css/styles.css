@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #8c9a85;
+  --primary-color: #536995;
   --secondary-color: #e0d9c9;
   --dark-color: #3c4142;
   --light-color: #f9f9f9;
@@ -18,12 +18,20 @@ body {
   background-color: #f9f9f9; /* padding: 0; was in first, not in second. overflow-x: hidden added */
 }
 
+html {
+  background-color: linear-gradient(135deg, #f8f9ff 0%, #f1f4f8 100%);
+}
+
 nav {
   display: flex;
   justify-content: center;
   background-color: #f8f8f8;
   padding: 15px 0;
   border-bottom: 1px solid #ddd;
+}
+
+h2 {
+  color: #495f8b;
 }
 
 .nav-logo img {
@@ -47,9 +55,10 @@ nav a:hover {
 }
 
 .hero {
-  height: 65vh; /* From Global Styles, overrides 90vh */
-  background-image: url("../images/wedd.jpeg"); /* Replace with your image URL */
+  height: 77vh; /* From Global Styles, overrides 90vh */
+  background-image: url("../images/mos15.jpeg"); /* Replace with your image URL */
   background-size: cover;
+  background-position: center;
   background-attachment: fixed;
   position: relative;
   display: flex;
@@ -92,24 +101,44 @@ nav a:hover {
   /* padding: 40px; Overrides 20px */
   border-radius: var(--border-radius); /* Overrides 10px */
   /* Original: color: #fff; z-index: 1; text-align: center; position: relative; top: 0; max-width: 500px; are lost */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center children horizontally */
+  justify-content: center;
+  gap: 1rem;
 }
 
 .details-overlay h2 {
   /* Last definition from Global Styles */
   font-size: 4.5rem; /* Overrides 32px */
   margin-bottom: 15px; /* Overrides 10px */
-  font-family: "Carattere", cursive;
-  font-weight: 400;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
   font-style: normal;
-  /* Original: font-family: "Playfair Display", serif; is lost */
+  line-height: 1.2;
+  letter-spacing: 30px;
+  text-align: center;
+  color: #495f8b;
+  font-weight: 100;
+  white-space: nowrap;
 }
 
 .details-overlay p {
   /* Last definition from Global Styles */
   font-size: 1.2rem; /* Overrides 18px */
-  margin-bottom: 30px; /* Overrides 20px */
   letter-spacing: 1px; /* Added */
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  line-height: 1.2;
+  text-align: center;
   /* Original: font-family: "Roboto", sans-serif; is lost */
+}
+
+.dresscode {
+  width: 40%;
+  display: block;
+  margin: 20px auto;
 }
 
 .details-overlay button {
@@ -156,6 +185,11 @@ nav a:hover {
   font-weight: 300;
 }
 
+#logo-center {
+  max-width: 200px;
+  margin: 0 auto;
+}
+
 .image-carousel {
   /* Last definition from Gallery Section */
   position: relative;
@@ -185,7 +219,7 @@ nav a:hover {
   top: 50%;
   transform: translateY(-50%);
   background: rgba(0, 0, 0, 0.5);
-  color: white;
+  color: #0492c2;
   border: none;
   padding: 10px 15px;
   cursor: pointer;
@@ -260,10 +294,10 @@ nav a:hover {
 .party-subtitle {
   font-family: "Playfair Display", serif;
   font-size: 2.2rem;
-  font-weight: 500;
+  font-weight: 200;
   text-align: center;
   margin-bottom: 3rem;
-  color: #333;
+  color: #213763;
   position: relative;
   display: inline-block;
   width: 100%;
@@ -312,6 +346,10 @@ nav a:hover {
   border-radius: 5px;
 }
 
+.member-name {
+  margin-bottom: 0px;
+}
+
 .travel-guide {
   background: url("path-to-background-image.jpg") no-repeat center center;
   background-size: cover;
@@ -350,7 +388,7 @@ nav a:hover {
 .category-icon {
   /* Last definition from Global Travel Guide Styles */
   font-size: 2.5rem; /* Replaces width/height for image icons */
-  color: #5a7d7c; /* Added */
+  color: #536995; /* Added */
   margin-bottom: 15px;
   /* width: 100px; height: auto; margin: 0 auto; are lost (meant for img icons) */
 }
@@ -480,7 +518,7 @@ nav a:hover {
 
 .footer-section {
   /* From second footer style block */
-  background: #4c5958;
+  background: #536995;
   padding: 50px 20px;
   text-align: center;
   color: #f1e7db;
@@ -502,12 +540,17 @@ nav a:hover {
 .wedding-date {
   /* Last definition from end of file, overrides footer version's styling */
   padding: 10px;
-  /* font-size, font-family, color, margin-bottom from previous definition are lost */
+  letter-spacing: 2px;
+  font-family: "Playfair Display", serif;
 }
 
 .social-links {
   /* From second footer style block */
   margin-bottom: 20px;
+}
+
+#fortino {
+  text-decoration: none;
 }
 
 .social-links a {
@@ -559,13 +602,14 @@ nav a:hover {
   /* From second footer style block */
   font-size: 0.9rem;
   font-family: "Roboto", sans-serif;
-  color: #c4b8a5;
+  letter-spacing: 2px;
+  color: #ffffff;
   margin-top: 15px;
 }
 
 /* Global Styles Btn - last definition is from Travel Section */
 .btn {
-  background-color: #5a7d7c;
+  background-color: #536995;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -577,7 +621,7 @@ nav a:hover {
 
 .btn:hover {
   /* From Travel Section styles */
-  background-color: #486866;
+  background-color: #536995;
 }
 
 .btn-primary {
@@ -691,9 +735,18 @@ nav a:hover {
 
 .hero-content {
   max-width: 800px;
-  padding: 30px;
+  padding: 10px;
   text-align: center;
   margin: 0 auto;
+  display: flex;
+  justify-content: center; /* horizontal centering */
+  align-items: center; /* vertical centering */
+  text-align: center; /* center text inside elements */
+}
+
+.damigels {
+  font-size: 12px;
+  margin-top: 3px;
 }
 
 .hero-title {
@@ -718,7 +771,7 @@ nav a:hover {
 .countdown-value {
   display: block;
   font-size: 2.5rem;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1;
   margin-bottom: 5px;
 }
@@ -732,6 +785,14 @@ nav a:hover {
 .wedding-details {
   /* background-color: #3b3029; */
   color: white;
+}
+
+.detail-icon i {
+  color: #536995;
+}
+
+.detail-location a {
+  text-decoration: none;
 }
 
 .details-container {
@@ -826,12 +887,21 @@ nav a:hover {
   font-style: italic; /* Added from timeline section */
 }
 
-.travel-container {
+/* .travel-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(5, minmax(250px, 1fr));
+  gap: 50px;
   max-width: 1100px;
   margin: 0 auto;
+} */
+
+.travel-container {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(200px, 1fr));
+  gap: 30px;
+  padding: 0 40px; /* Adds horizontal space on sides */
+  max-width: 1400px; /* Optional: limit total width */
+  margin: 0 auto; /* Center the grid */
 }
 
 .photo-share-section {
@@ -842,10 +912,11 @@ nav a:hover {
 }
 
 .share-btn {
-  background-color: #5a7d7c;
+  background-color: #536995;
   color: white;
   border: none;
   padding: 12px 25px;
+  margin-top: 20px;
   font-size: 1rem;
   border-radius: 6px;
   cursor: pointer;
@@ -855,7 +926,7 @@ nav a:hover {
 }
 
 .share-btn:hover {
-  background-color: #486866;
+  background-color: #89cff0;
 }
 
 .gallery-grid {
@@ -907,7 +978,7 @@ nav a:hover {
   content: "";
   position: absolute;
   width: 2px;
-  background-color: #8c9a85;
+  background-color: #333;
   top: 0;
   bottom: 0;
   left: 50%;
@@ -939,12 +1010,12 @@ nav a:hover {
   position: absolute;
   width: 30px;
   height: 30px;
-  background-color: #a5c1a9;
-  border: 5px solid #fff;
+  background-color: #333;
+  border: 2px solid #fff;
   border-radius: 50%;
   left: 50%;
   transform: translateX(-50%);
-  top: 0;
+  top: 100px;
   z-index: 5;
 }
 
@@ -980,7 +1051,7 @@ nav a:hover {
 }
 
 .timeline-content h3 {
-  color: #998e76;
+  color: #536995;
   margin-bottom: 10px;
   font-size: 20px;
 }
@@ -1093,7 +1164,7 @@ fieldset .radio-group {
 }
 
 button[type="submit"] {
-  background-color: #007bff;
+  background-color: #536995;
   color: white;
   padding: 15px 25px;
   font-size: 1.1em;
@@ -1107,7 +1178,7 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-  background-color: #0056b3;
+  background-color: #89cff0;
 }
 
 fieldset[disabled] {
@@ -1129,12 +1200,11 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
   color: #333;
-  background: #f8f9fa;
 }
 
 .travel-section {
   min-height: 100vh;
-  padding: 2rem 1rem;
+  padding: 4rem 2rem;
   /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
   position: relative;
   overflow: hidden;
@@ -1147,7 +1217,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.05"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  background: linear-gradient(135deg, #f8f9ff 0%, #f1f4f8 100%);
   pointer-events: none;
 }
 
@@ -1160,11 +1230,12 @@ body {
 }
 
 .section-header h2 {
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  font-weight: 300;
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  font-weight: 200;
+  text-transform: uppercase;
   margin-bottom: 1rem;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  letter-spacing: -1px;
+  letter-spacing: 3px;
+  color: #2c4e87;
 }
 
 .section-header p {
@@ -1195,7 +1266,7 @@ body {
 
 .category:hover {
   transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2); */
   background: rgba(255, 255, 255, 1);
 }
 
@@ -1203,7 +1274,8 @@ body {
   width: 80px;
   height: 80px;
   margin: 0 auto 1.5rem;
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  /* background: linear-gradient(135deg, #667eea, #764ba2); */
+  background: #536995;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -1211,9 +1283,9 @@ body {
   transition: all 0.3s ease;
 }
 
-.category:hover .category-icon {
+/* .category:hover .category-icon {
   transform: rotate(10deg) scale(1.1);
-}
+} */
 
 .category-icon i {
   font-size: 2rem;
@@ -1235,7 +1307,8 @@ body {
 }
 
 .travel-btn {
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  /* background: linear-gradient(135deg, #667eea, #764ba2); */
+  background: #536995;
   color: white;
   border: none;
   padding: 1rem 2rem;
@@ -1537,8 +1610,12 @@ body {
   }
 
   .hero {
-    height: 33vh;
-    background-size: contain;
+    height: 70vh;
+    background-size: cover;
+  }
+
+  #logo-center {
+    max-width: 150px;
   }
 
   .timeline-dot {
@@ -1580,10 +1657,19 @@ body {
   }
 
   .countdown-value {
-    width: 10px;
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+
+  .countdown-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .section-header h2 {
+    font-size: 2em;
   }
 }
 
-body {
-  background: #efe9e4;
-}
+/* #0492c2 */

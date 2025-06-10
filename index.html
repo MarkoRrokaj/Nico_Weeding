@@ -9,16 +9,16 @@
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Carattere&family=Happy+Monkey&display=swap" rel="stylesheet">
-    <!-- <script type="module">import emailjs from 'https://cdn.emailjs.com/dist/email.min.js'; -->
-        <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-        <script>
-          // Initialize EmailJS with your public key
-          (function () {
-            emailjs.init("6E4t6gnq3E5YHeCTN"); // Replace with your EmailJS public key
-          })();
-        </script>
-</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+        // Initialize EmailJS with your public key
+        (function () {
+        emailjs.init("6E4t6gnq3E5YHeCTN"); // Replace with your EmailJS public key
+        })();
+    </script>
 
 </head>
 <body>
@@ -54,7 +54,13 @@
     <div class="hero-content">
         <!-- <h1 class="hero-title">Nico & Shini</h1> -->
         <div class="details-overlay">
-            <h2>Shini & Nico</h2>
+            <img id="logo-center" src="images/logo.png" alt="Logo Wedding">
+            <!-- <h2>  
+                <span>VARISINI</span><br>
+                <span>&</span><br>
+                <span>NICOLO&nbsp;</span>
+            </h2> -->
+            <img src="images/shini-nico.png" alt="logo">
             <p>September 26, 2025 | Ancona, Italy</p>
             <div class="countdown-timer">
                 <!-- Countdown will be added by JavaScript -->
@@ -121,12 +127,25 @@
                     <p>-</p>
                 </div>
             </div>
+     
+            <!-- Event 5 -->
+            <div class="timeline-item odd">
+                <div class="timeline-dot"></div>
+                <p class="timeline-date">September 2025</p>
+                <div class="timeline-content">
+                    <h3>We Got Married</h3>
+                    <p>-</p>
+                </div>
+                <div class="timeline-img-container">
+                    <img src="./images/mos17.jpeg" alt="We Got Engaged">
+                </div>
+            </div>
         </div>
     </section>
 </div>
 
     <section id="details" class="wedding-details">
-        <div class="section-header light">
+        <div class="section-header">
             <h2>Wedding Details</h2>
             <p>Join us for our special day</p>
         </div>
@@ -137,7 +156,7 @@
                 </div>
                 <h3>Welcome Party</h3>
                 <p class="detail-time">18:00</p>
-                <p class="detail-location"><a href="#">Dress Code Required</a></p>
+                <p class="detail-location"><a href="#travel">Dress Code Required</a></p>
                 <p class="detail-address">-</p>
             </div>
             <div class="detail-card">
@@ -167,17 +186,30 @@
             <p>Cherished moments together</p>
         </div>
         <div class="gallery-grid">
-            <div class="gallery-item tall"><img src="./images/mos7.jpeg" ></div>
-            <div class="gallery-item wide"><img src="./images/mos2.jpeg"></div>
-            <div class="gallery-item"><img src="./images/mos3.jpeg"></div>
+            <div class="gallery-item tall"><img src="./images/mos2.jpeg" ></div>
+            <div class="gallery-item wide"><img src="./images/mos14.jpeg"></div>
+            <div class="gallery-item"><img src="./images/mos6.jpeg"></div>
+            <div class="gallery-item tall"><img src="./images/mos1.jpeg"></div>
+            <div class="gallery-item"><img src="./images/mos5.jpeg" ></div>
+            <div class="gallery-item"><img src="./images/mos8.jpeg" ></div>
+            <div class="gallery-item tall"><img src="./images/mos7.jpeg"></div>
+            <div class="gallery-item"><img src="./images/mos9.jpeg" ></div>
+            <div class="gallery-item wide"><img src="./images/mos10.jpeg" ></div>
+            <div class="gallery-item wide"><img src="./images/mos15.jpeg"></div>
+
+            
+            <div class="gallery-item tall"><img src="./images/mos16.jpeg" ></div>
+            <div class="gallery-item wide"><img src="./images/mos13.jpeg" ></div>
+            <div class="gallery-item"><img src="./images/mos12.jpeg"></div>
+            <div class="gallery-item tall"><img src="./images/mos17.jpeg"></div>
+            <div class="gallery-item"><img src="./images/mos3.jpeg" ></div>
+            <div class="gallery-item"><img src="./images/ring.jpeg" ></div>
             <div class="gallery-item tall"><img src="./images/mos4.jpeg"></div>
-            <div class="gallery-item"><img src="./images/mos5.jpeg" ></div>
-            <div class="gallery-item"><img src="./images/mos5.jpeg" ></div>
-            <div class="gallery-item tall"><img src="./images/mos3.jpeg"></div>
-            <div class="gallery-item"><img src="./images/mos5.jpeg" ></div>
-            <div class="gallery-item wide"><img src="./images/mos5.jpeg" ></div>
-            <div class="gallery-item tall"><img src="./images/mos5.jpeg" ></div>
-            <div class="gallery-item wide"><img src="./images/mos6.jpeg"></div>
+            <div class="gallery-item"><img src="./images/.jpeg" ></div>
+            <div class="gallery-item wide"><img src="./images/mos18.jpeg"></div>
+            <div class="gallery-item wide"><img src="./images/mos11.jpeg"></div>
+
+
         </div>
     </section>
     
@@ -193,39 +225,45 @@
             <div class="party-members party-members-girls">
                 <div class="party-member">
                     <div class="member-img-container">
-                        <img src="images/ellen.jpeg" alt="Ellen" class="member-image">
-                    </div>
-                    <h4 class="member-name">Ellen</h4>
-                </div>
-                <div class="party-member">
-                    <div class="member-img-container">
                         <img src="images/diya.jpeg" alt="Diya" class="member-image">
                     </div>
                     <h4 class="member-name">Diya</h4>
+                    <p class="damigels">Maid of Honor</p>
+                </div>
+                <div class="party-member">
+                    <div class="member-img-container">
+                        <img src="images/ellen.jpeg" alt="Ellen" class="member-image">
+                    </div>
+                    <h4 class="member-name">Ellen</h4>
+                    <p class="damigels">Bridesmaid</p>
                 </div>
                 <div class="party-member">
                     <div class="member-img-container">
                         <img src="images/stefania.jpeg" alt="Stefania" class="member-image">
                     </div>
                     <h4 class="member-name">Stefania</h4>
+                    <p class="damigels">Bridesmaid</p>
                 </div>
                 <div class="party-member">
                     <div class="member-img-container">
                         <img src="images/lauren.jpeg" alt="Lauren" class="member-image">
                     </div>
                     <h4 class="member-name">Lauren</h4>
+                    <p class="damigels">Bridesmaid</p>
                 </div>
                 <div class="party-member">
                     <div class="member-img-container">
                         <img src="images/vale.jpeg" alt="Valentina" class="member-image">
                     </div>
                     <h4 class="member-name">Valentina</h4>
+                    <p class="damigels">Bridesmaid</p>
                 </div>
                 <div class="party-member">
                     <div class="member-img-container">
                         <img src="images/nanthana.jpeg" alt="Nanthana" class="member-image">
                     </div>
                     <h4 class="member-name">Nanthana</h4>
+                    <p class="damigels">Bridesmaid</p>
                 </div>
             </div>
         </div>
@@ -235,51 +273,59 @@
             <div class="party-members">
                 <div class="party-member">
                     <div class="member-img-container">
+                        <img src="images/marko.jpg" alt="Marko" class="member-image">
+                    </div>
+                    <h4 class="member-name">Marko</h4>
+                    <p class="damigels">Best Man</p>
+                </div>
+                <div class="party-member">
+                    <div class="member-img-container">
                         <img src="images/cope.jpeg" alt="Francesco" class="member-image">
                     </div>
                     <h4 class="member-name">Francesco</h4>
+                    <p class="damigels">Groomsman</p>
                 </div>
                 <div class="party-member">
                     <div class="member-img-container">
                         <img src="images/gio.jpeg" alt="Giole" class="member-image">
                     </div>
                     <h4 class="member-name">Giole</h4>
+                    <p class="damigels">Groomsman</p>
                 </div>
                 <div class="party-member">
                     <div class="member-img-container">
                         <img src="images/maccy.jpeg" alt="Mathias" class="member-image">
                     </div>
                     <h4 class="member-name">Mathias</h4>
+                    <p class="damigels">Groomsman</p>
                 </div>
                 <div class="party-member">
                     <div class="member-img-container">
                         <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=300&h=300&fit=crop&crop=face" alt="Medji" class="member-image">
                     </div>
                     <h4 class="member-name">Medji</h4>
+                    <p class="damigels">Groomsman</p>
                 </div>
                 <div class="party-member">
                     <div class="member-img-container">
-                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face" alt="Jake" class="member-image">
+                        <img src="images/jake.jpg" alt="Jake" class="member-image">
                     </div>
                     <h4 class="member-name">Jake</h4>
+                    <p class="damigels">Groomsman</p>
                 </div>
                 <div class="party-member">
                     <div class="member-img-container">
                         <img src="images/tibor.jpeg" alt="Tibor" class="member-image">
                     </div>
                     <h4 class="member-name">Tibor</h4>
+                    <p class="damigels">Groomsman</p>
                 </div>
                 <div class="party-member">
                     <div class="member-img-container">
                         <img src="images/roland.jpeg" alt="Roland" class="member-image">
                     </div>
                     <h4 class="member-name">Roland</h4>
-                </div>
-                <div class="party-member">
-                    <div class="member-img-container">
-                        <img src="images/marko.jpg" alt="Marko" class="member-image">
-                    </div>
-                    <h4 class="member-name">Marko</h4>
+                    <p class="damigels">Groomsman</p>
                 </div>
             </div>
         </div>
@@ -309,6 +355,16 @@
                 <p>Getting to and around Ancona with ease and comfort</p>
                 <button class="travel-btn" onclick="openTransportOverlay()">Options</button>
             </div>
+
+            <div class="category">
+                <div class="category-icon">
+                    <i class="fas fa-tshirt"></i>
+                </div>
+                <h3>Dress Code</h3>
+                <p>From pastel cultural elegance to black-tie, each event has its own theme</p>
+                <button class="travel-btn" onclick="openDresscodeOverlay()">Details</button>
+            </div>            
+            
             
             <div class="category">
                 <div class="category-icon">
@@ -436,14 +492,54 @@
         <div class="overlay-content">
             <button class="close-btn" onclick="closeOverlay('lodgingOverlay')">&times;</button>
             <h2>Accommodation Options</h2>
-            <p>We're working on compiling the best lodging options for our guests. Check back soon for recommendations on hotels, B&Bs, and vacation rentals in the Ancona and Portonovo area.</p>
-            <p>In the meantime, we recommend looking for accommodations in:</p>
             <h3>🏨 Recommended Areas</h3>
             <p><strong>Portonovo Bay:</strong> Close to the wedding venue with stunning sea views</p>
             <p><strong>Ancona City Center:</strong> Historic charm with easy access to restaurants and transportation</p>
             <p><strong>Mount Conero Area:</strong> Peaceful countryside setting with panoramic views</p>
+
+            <p>Bride and groom will contact you individually with more information</p>
         </div>
     </div>
+
+    <!-- Dresscode Overlay -->
+    <div id="dresscodeOverlay" class="overlay">
+        <div class="overlay-content">
+            <button class="close-btn" onclick="closeOverlay('dresscodeOverlay')">&times;</button>
+            <h2>Dress Code</h2>
+            <p>We’re so excited to celebrate with you in beautiful Portonovo! Here’s what to wear for each event:</p>
+
+            <h3>Welcome Party – Cultural Elegance in Pastels</h3>
+            <p>
+                For our welcome evening, we invite you to wear attire inspired by Asian heritage – think traditional or 
+                contemporary styles with a cultural touch – in soft pastel tones. 🌸 <br>
+                <strong>Please avoid wearing white or pistachio green</strong>, as these are the colors the bride and groom will be wearing.
+            </p>
+
+            <img class="dresscode" src="images/dresscode3.jpeg" alt="Dresscode Welcome Party">
+
+            <h3>Wedding Ceremony (27th September) – Formal Attire</h3>
+            <p>
+                The ceremony will be a formal event. We kindly ask that you dress in formal attire to honor the sacred nature 
+                of the occasion. The bridal party will be wearing shades of blue, so feel free to incorporate blue tones 
+                into your outfit if you'd like to coordinate with the theme.
+            </p>
+
+            <img class="dresscode" src="images/dresscode1.jpeg" alt="Dresscode Wedding Ceremony">
+
+            <h3>Reception (27th September) – Black Tie Event</h3>
+            <p>
+                The reception following the ceremony will be a black tie event. <br>
+                <strong>For gentlemen:</strong> tuxedos or dark formal suits. <br>
+                <strong>For ladies:</strong> elegant evening gowns, formal cocktail dresses, lehenga, or saree. <br>
+                Let’s make it a glamorous and unforgettable celebration under the Italian sky ✨
+            </p>
+
+            <img class="dresscode" src="images/dresscode2.jpeg" alt="Dresscode Black Tie Event">
+
+            <p><strong>PS:</strong> If you would like any support for the outfit, please do not hesitate to contact us!</p>
+        </div>
+    </div>
+
 
     <!-- Activities Overlay -->
     <div id="activitiesOverlay" class="overlay">
@@ -479,7 +575,7 @@
                 So, if you snap some amazing shots (or even some hilariously bad ones), we’d love for you to share them with us. 
                 We’ve set up a <strong>Google Drive</strong> where you can drop all your best (and worst) moments. 
                 Think of it as our own little wedding paparazzi gallery. 📷✨</p>
-            <a href="YOUR_GOOGLE_DRIVE_LINK" target="_blank" class="btn share-btn">Upload Your Pics</a>
+            <a href="https://drive.google.com/drive/folders/1FA3DpGgGKBm1n19e-uVPnJ20MLBPdyu4" target="_blank" class="btn share-btn">Upload Your Pics</a>
         </div>
     </section>
 
@@ -495,25 +591,7 @@
                     <span class="arrow"><i class="fas fa-chevron-down"></i></span>
                 </button>
                 <div class="faq-answer">
-                    <p>The ceremony will be held at RAVAL, Piazza del Papa, and the reception will follow at Posatora. Both locations are in Ancona, Italy.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">
-                    Where should I stay? 
-                    <span class="arrow"><i class="fas fa-chevron-down"></i></span>
-                </button>
-                <div class="faq-answer">
-                    <p>We recommend the Grand Hotel Ancona or Villa Serena for accommodation. Both are located within 15 minutes of our venue and offer special rates for our wedding guests.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">
-                    How do I get there? Will there be parking? 
-                    <span class="arrow"><i class="fas fa-chevron-down"></i></span>
-                </button>
-                <div class="faq-answer">
-                    <p>The closest airport is Ancona Falconara Airport (AOI). From there, you can rent a car or take a taxi to the venue. Complimentary parking will be available at both the ceremony and reception venues.</p>
+                    <a id="fortino" href="https://www.fortinonapoleonico.com/">Fortino Napoleonico</a>
                 </div>
             </div>
             <div class="faq-item">
@@ -522,7 +600,7 @@
                     <span class="arrow"><i class="fas fa-chevron-down"></i></span>
                 </button>
                 <div class="faq-answer">
-                    <p>The ceremony starts at 4:00 PM. We recommend arriving at least 30 minutes early to find seating and get settled.</p>
+                    <p>The welcome party begins at 6 PM. It is recommended to arrive about 15 minutes early to ensure a prompt start. The exact timing for the wedding ceremony and reception will be confirmed (TBC)</p>
                 </div>
             </div>
             <div class="faq-item">
@@ -531,7 +609,7 @@
                     <span class="arrow"><i class="fas fa-chevron-down"></i></span>
                 </button>
                 <div class="faq-answer">
-                    <p>Our wedding is formal attire. Suits and ties for men, cocktail or formal dresses for women. The ceremony will be held outdoors, so please consider comfortable shoes for garden terrain.</p>
+                    <p>For more details, please refer to the dress code section</p>
                 </div>
             </div>
         </div>
@@ -588,7 +666,7 @@
         </fieldset>
     
         <br />
-        <button type="submit">Submit RSVP</button>
+        <button id="rspv-btn" type="submit">Submit</button>
       </form>
     </section>
 
@@ -604,7 +682,7 @@
             <div class="back-to-top">
                 <a href="#home"><i class="fas fa-chevron-up"></i></a>
             </div>
-            <p class="copyright">&copy; 2025 by Shini & Nico | Created by Marko Rrokaj</p>
+            <p class="copyright">&copy; 2025 | Shini & Nico | Created by Marko Rrokaj</p>
         </div>
     </footer>
     

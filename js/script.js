@@ -1,115 +1,3 @@
-// document.addEventListener("DOMContentLoaded", function () {
-//   // Initialize Carousel with smoother transitions and auto-play
-//   const slides = document.querySelectorAll(".carousel-slide");
-//   const prevButton = document.querySelector(".carousel-button.prev");
-//   const nextButton = document.querySelector(".carousel-button.next");
-//   let currentIndex = 0;
-//   let autoplayInterval;
-
-//   function goToSlide(index) {
-//     if (index < 0) {
-//       index = slides.length - 1;
-//     } else if (index >= slides.length) {
-//       index = 0;
-//     }
-
-//     // Add smooth transition effect
-//     carousel.style.transition = "transform 0.5s ease-in-out";
-//     carousel.style.transform = `translateX(-${index * 100}%)`;
-//     currentIndex = index;
-
-//     // Update active indicators if they exist
-//     updateIndicators(index);
-//   }
-
-//   // Create dot indicators for the carousel
-//   function createCarouselIndicators() {
-//     const indicatorsContainer = document.createElement("div");
-//     indicatorsContainer.className = "carousel-indicators";
-
-//     slides.forEach((_, index) => {
-//       const indicator = document.createElement("span");
-//       indicator.className = "carousel-indicator";
-//       if (index === 0) indicator.classList.add("active");
-
-//       indicator.addEventListener("click", () => goToSlide(index));
-//       indicatorsContainer.appendChild(indicator);
-//     });
-
-//     document.querySelector(".image-carousel").appendChild(indicatorsContainer);
-//   }
-
-//   function updateIndicators(index) {
-//     const indicators = document.querySelectorAll(".carousel-indicator");
-//     indicators.forEach((indicator, i) => {
-//       if (i === index) {
-//         indicator.classList.add("active");
-//       } else {
-//         indicator.classList.remove("active");
-//       }
-//     });
-//   }
-
-//   function startAutoplay() {
-//     autoplayInterval = setInterval(() => {
-//       goToSlide(currentIndex + 1);
-//     }, 5000); // Change slide every 5 seconds
-//   }
-
-//   function stopAutoplay() {
-//     clearInterval(autoplayInterval);
-//   }
-
-//   // Event listeners for carousel navigation
-//   prevButton.addEventListener("click", () => {
-//     goToSlide(currentIndex - 1);
-//     stopAutoplay();
-//     setTimeout(startAutoplay, 10000); // Resume autoplay after 10 seconds of inactivity
-//   });
-
-//   nextButton.addEventListener("click", () => {
-//     goToSlide(currentIndex + 1);
-//     stopAutoplay();
-//     setTimeout(startAutoplay, 10000);
-//   });
-
-//   // Touch swipe functionality for mobile
-//   let touchStartX = 0;
-//   let touchEndX = 0;
-
-//   carousel.addEventListener(
-//     "touchstart",
-//     (e) => {
-//       touchStartX = e.changedTouches[0].screenX;
-//       stopAutoplay();
-//     },
-//     false
-//   );
-
-//   carousel.addEventListener(
-//     "touchend",
-//     (e) => {
-//       touchEndX = e.changedTouches[0].screenX;
-//       handleSwipe();
-//       setTimeout(startAutoplay, 10000);
-//     },
-//     false
-//   );
-
-//   function handleSwipe() {
-//     if (touchEndX < touchStartX - 50) {
-//       // Swipe left
-//       goToSlide(currentIndex + 1);
-//     } else if (touchEndX > touchStartX + 50) {
-//       // Swipe right
-//       goToSlide(currentIndex - 1);
-//     }
-//   }
-
-//   // Initialize carousel components
-//   createCarouselIndicators();
-//   startAutoplay();
-
 // Enhanced FAQ accordion with smooth transitions
 document.querySelectorAll(".faq-question").forEach((item) => {
   item.addEventListener("click", () => {
@@ -403,6 +291,7 @@ function animateOnScroll() {
     }
   });
 }
+
 function openTransportOverlay() {
   document.getElementById("transportOverlay").classList.add("active");
   document.body.style.overflow = "hidden";
@@ -415,6 +304,11 @@ function openEatOverlay() {
 
 function openLodgingOverlay() {
   document.getElementById("lodgingOverlay").classList.add("active");
+  document.body.style.overflow = "hidden";
+}
+
+function openDresscodeOverlay() {
+  document.getElementById("dresscodeOverlay").classList.add("active");
   document.body.style.overflow = "hidden";
 }
 
@@ -447,6 +341,3 @@ document.addEventListener("keydown", function (e) {
     document.body.style.overflow = "auto";
   }
 });
-
-// window.addEventListener("scroll", animateOnScroll);
-// animateOnScroll(); // Initial check

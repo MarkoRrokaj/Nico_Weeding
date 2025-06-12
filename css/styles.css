@@ -55,7 +55,7 @@ nav a:hover {
 }
 
 .hero {
-  height: 77vh; /* From Global Styles, overrides 90vh */
+  height: 73vh; /* From Global Styles, overrides 90vh */
   background-image: url("../images/mos15.jpeg"); /* Replace with your image URL */
   background-size: cover;
   background-position: center;
@@ -1500,30 +1500,6 @@ body {
 
   .section-header h2 {
     font-size: 2.5rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .category {
-    padding: 1.5rem;
-  }
-
-  .category-icon {
-    width: 60px;
-    height: 60px;
-  }
-
-  .category-icon i {
-    font-size: 1.5rem;
-  }
-
-  .overlay-content {
-    padding: 1.5rem;
-  }
-
-  .travel-btn {
-    padding: 0.8rem 1.5rem;
-    font-size: 0.9rem;
   }
 }
 

@@ -1555,6 +1555,7 @@ body {
   .hero {
     height: 560px;
     background-size: cover;
+    background-attachment: scroll;
   }
 
   #logo-center {

@@ -1614,6 +1614,15 @@ body {
   .section-header h2 {
     font-size: 2em;
   }
+
+  .travel-container {
+    padding: 15px;
+    display: block;
+  }
+
+  .category {
+    margin-top: 15px;
+  }
 }
 
 /* #0492c2 */

@@ -170,63 +170,110 @@ function updateCountdown() {
 }
 
 // RSVP Functions
-
-const name = document.getElementById("name").value;
-const mainRsvpRadios = document.querySelectorAll('input[name="main_rsvp"]');
-const detailsFieldset = document.getElementById("detailsFieldset");
-const dietaryRadios = document.getElementsByName("has_dietary");
-const dietaryText = document.getElementById("dietaryText");
-
-// Enable or disable fieldset based on RSVP main choice
-mainRsvpRadios.forEach((radio) => {
-  radio.addEventListener("change", () => {
-    detailsFieldset.disabled = radio.value === "No";
-  });
-});
-
-// Show/hide dietary textarea
-dietaryRadios.forEach((radio) => {
-  radio.addEventListener("change", () => {
-    dietaryText.style.display = radio.value === "Yes" ? "block" : "none";
-  });
-});
-
 document.addEventListener("DOMContentLoaded", function () {
-  // Ensure the "No" option for the main RSVP is selected by default
+  const form = document.getElementById("rsvpForm");
+  const nameInput = document.getElementById("name");
+  const dietInput = document.getElementById("diet");
+  const dietaryTextContainer = document.getElementById("dietaryText");
   const mainRsvpRadios = document.querySelectorAll('input[name="main_rsvp"]');
+  const detailsFieldset = document.getElementById("detailsFieldset");
+  const submitButton = document.getElementById("rsvpBtn");
+
+  // Toggle fieldset based on RSVP choice
   mainRsvpRadios.forEach((radio) => {
-    if (radio.value === "No") {
-      radio.checked = true;
-    }
+    radio.addEventListener("change", () => {
+      detailsFieldset.disabled = radio.value === "No";
+    });
   });
 
-  document
-    .getElementById("rsvpForm")
-    .addEventListener("submit", function (event) {
-      event.preventDefault();
+  // Show/hide dietary textarea
+  document.querySelectorAll('input[name="has_dietary"]').forEach((radio) => {
+    radio.addEventListener("change", () => {
+      if (radio.value === "Yes" && radio.checked) {
+        dietaryTextContainer.style.display = "block";
+      } else {
+        dietaryTextContainer.style.display = "none";
+        dietInput.value = "";
+      }
+    });
+  });
 
-      const name = document.getElementById("name").value;
-      const mainRSVP = document.querySelector(
-        'input[name="main_rsvp"]:checked'
-      ).value;
+  // Handle form submission
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    submitButton.disabled = true; // Disable submit button immediately
 
-      let message;
-      if (mainRSVP === "Yes") {
-        const welcomeParty =
-          document.querySelector('input[name="welcome_party"]:checked')
-            ?.value || "No response";
-        const ceremony =
-          document.querySelector('input[name="ceremony"]:checked')?.value ||
-          "No response";
-        const hasDietary =
-          document.querySelector('input[name="has_dietary"]:checked')?.value ||
-          "No";
-        const diet =
-          hasDietary === "Yes"
-            ? document.getElementById("diet").value || "Not specified"
-            : "None";
+    const name = nameInput.value.trim();
+    const mainRSVP = document.querySelector(
+      'input[name="main_rsvp"]:checked'
+    )?.value;
 
-        message = `Dear Nico and Shini,
+    if (!name) {
+      alert("Please enter your name.");
+      nameInput.focus();
+      submitButton.disabled = false;
+      return;
+    }
+
+    if (!mainRSVP) {
+      alert("Please select Yes or No for attending.");
+      submitButton.disabled = false;
+      return;
+    }
+
+    if (mainRSVP === "No") {
+      const message = `Dear Nico and Shini,
+
+Thank you so much for the kind invitation to your wedding!
+
+Unfortunately, I won’t be able to attend, but I’m wishing you both a beautiful and memorable wedding day!
+
+Warm regards,  
+${name}`;
+      sendEmail(name, message);
+      return;
+    }
+
+    const welcomeParty = document.querySelector(
+      'input[name="welcome_party"]:checked'
+    )?.value;
+    const ceremony = document.querySelector(
+      'input[name="ceremony"]:checked'
+    )?.value;
+    const hasDietary = document.querySelector(
+      'input[name="has_dietary"]:checked'
+    )?.value;
+
+    if (!welcomeParty) {
+      alert("Please select your Welcome Party preference.");
+      submitButton.disabled = false;
+      return;
+    }
+
+    if (!ceremony) {
+      alert("Please select your Ceremony & Reception preference.");
+      submitButton.disabled = false;
+      return;
+    }
+
+    if (!hasDietary) {
+      alert("Please indicate if you have dietary requirements.");
+      submitButton.disabled = false;
+      return;
+    }
+
+    let diet = "None";
+    if (hasDietary === "Yes") {
+      diet = dietInput.value.trim();
+      if (!diet) {
+        alert("Please specify your dietary requirements.");
+        dietInput.focus();
+        submitButton.disabled = false;
+        return;
+      }
+    }
+
+    const message = `Dear Nico and Shini,
 
 Thank you so much for the kind invitation to your wedding!
 
@@ -240,33 +287,29 @@ Wishing you all the best as you prepare for your big day!
 
 Warm regards,  
 ${name}`;
-      } else {
-        message = `Dear Nico and Shini,
 
-Thank you so much for the kind invitation to your wedding!
+    sendEmail(name, message);
+  });
 
-Unfortunately, I won’t be able to attend, but I’m wishing you both a beautiful and memorable wedding day!
-
-Warm regards,  
-${name}`;
-      }
-
-      emailjs
-        .send("service_jn6cwza", "template_8lpsqz9", {
-          name: document.getElementById("name").value,
-          rsvp_message: message,
-        })
-        .then(() => {
-          alert("RSVP sent successfully!");
-          const form = document.getElementById("rsvpForm");
-          form.reset();
-          dietaryText.style.display = "none";
-        })
-        .catch((error) => {
-          alert("Failed to send RSVP: " + JSON.stringify(error));
-        });
-    });
-}); // End of DOMContentLoaded listener
+  function sendEmail(name, message) {
+    emailjs
+      .send("service_jn6cwza", "template_8lpsqz9", {
+        name: name,
+        rsvp_message: message,
+      })
+      .then(() => {
+        alert("RSVP sent successfully!");
+        form.reset();
+        dietaryTextContainer.style.display = "none";
+        detailsFieldset.disabled = true;
+        submitButton.disabled = false;
+      })
+      .catch((error) => {
+        alert("Failed to send RSVP: " + JSON.stringify(error));
+        submitButton.disabled = false;
+      });
+  }
+});
 
 // Add countdown to the hero section
 const detailsOverlay = document.querySelector(".details-overlay");
